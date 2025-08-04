@@ -1024,6 +1024,7 @@ html {
     font-weight: 500;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    min-height: 140px;
 }
 
 .skill-tag:hover {
@@ -1655,7 +1656,8 @@ html {
     }
     
     .extension-mini-card {
-        padding: 20px;
+        padding: 25px;
+        min-height: 120px;
     }
     
     .extension-mini-header h4 {
@@ -1749,10 +1751,11 @@ html {
 .extension-mini-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
-    padding: 25px;
+    padding: 30px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    min-height: 140px;
 }
 
 .extension-mini-card:hover {
@@ -1822,4 +1825,11 @@ html {
 .btn-secondary:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.mini-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    line-height: 1.4;
 }

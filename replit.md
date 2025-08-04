@@ -12,6 +12,10 @@ This is a static portfolio website for a freelance automation specialist who wor
 - **Removed:** LinkedIn contact method, support technical references
 - **Legal concerns:** No mention of current employer (Rappi), avoid naming Uber Eats/PedidosYa directly
 - **Layout preference:** Psychological design that's easy for clients to understand services
+- **Content updates:** Changed "copiar y pegar manual" to "automatizo procesos operativos"
+- **Social media:** Removed LinkedIn, Twitter, GitHub icons from footer and contact
+- **Extension focus:** Authentic 16 extensions, Calculator moved to mini-cards, added Replicador Masivo
+- **Terminology:** RPA changed to "automatización simulación click", removed blog references
 
 ## System Architecture
 
@@ -54,13 +58,14 @@ This is a static portfolio website for a freelance automation specialist who wor
 2. **Convertor Web → Excel/Sheets** - Web scraping to organized spreadsheets
 3. **Analizador Google Drive** - Image quality analysis and direct download
 4. **Descargador Inteligente de Imágenes** - Smart bulk download with naming
-5. **Calculador de Porcentajes** - Automatic percentage calculations
+5. **Replicador Masivo de Valores** - Replaces manual one-by-one replication (replaced calculator)
 
-### Additional Extensions (11 mini-cards)
-- Copiador de Textos Avanzado, Organizador de Archivos, Extractor de Enlaces
-- Formateador de Datos, Capturador de Pantallas, Comparador de Precios
-- Generador de Códigos, Monitor de Páginas, Validador de Formularios
-- Sincronizador de Datos, Automatizador de Clicks
+### Additional Extensions (11 mini-cards) - Based on Real Extensions
+- Extractor Multi-Pestaña, Calculadora de Porcentajes, Control de Ventanas Pro
+- Gestor de Pestañas Inteligente, Auto-Rellenador de Campos, Monitor de Cambios Web
+- Exportador Universal, Automatizador de Enlaces, Sincronizador de Plataformas
+- Procesador de Listas Masivas, Validador de Datos Inteligente
+- Each with micro-descriptions explaining specific functionality
 
 ### Browser APIs
 - **Scroll API**: For navbar behavior and smooth scrolling functionality
