@@ -2,11 +2,16 @@
 
 ## Overview
 
-This is a static portfolio website for a freelance automation specialist. The site showcases expertise in process automation, Chrome extension development, and business optimization solutions. Built as a professional landing page to attract freelance clients, it features a modern design with animated backgrounds, responsive layout, and smooth user interactions. The portfolio emphasizes generic automation services rather than platform-specific solutions, targeting a broad range of potential business clients.
+This is a static portfolio website for a freelance automation specialist who works at Rappi and has created 16 Chrome extensions. The portfolio showcases 5 main extensions with video demonstration spaces and 11 additional extensions in a simplified 2-column layout. The design uses psychological principles to make services easy to understand for non-technical clients, emphasizing real time savings (90% reduction) and practical automation solutions without mentioning the current employer for legal reasons.
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- **Communication style:** Simple, everyday language
+- **Font:** Changed from Inter to Poppins for more professional appearance
+- **Time reduction metric:** 90% (not 85%)
+- **Removed:** LinkedIn contact method, support technical references
+- **Legal concerns:** No mention of current employer (Rappi), avoid naming Uber Eats/PedidosYa directly
+- **Layout preference:** Psychological design that's easy for clients to understand services
 
 ## System Architecture
 
@@ -31,16 +36,31 @@ Preferred communication style: Simple, everyday language.
 - **Particle System**: Dynamic floating particles for enhanced visual experience
 
 ### Content Strategy
-- **Generic Service Focus**: Broad automation services rather than platform-specific solutions
-- **Professional Positioning**: Emphasis on business optimization and process improvement
-- **Trust Building**: Professional design and clear service descriptions
-- **Contact-Driven**: Multiple contact touchpoints throughout the site
+- **Authentic Focus**: Based on 16 real Chrome extensions actually developed
+- **5 Main Extensions**: Showcased with video/GIF demonstration spaces
+- **11 Additional Extensions**: Displayed in 2-column mini-card layout
+- **Clear Value Proposition**: "De horas de trabajo manual a minutos automatizados"
+- **Simple Language**: Avoiding technical jargon, explaining benefits in everyday terms
+- **Contact-Driven**: Videollamada replaced LinkedIn, emphasis on free consultation
 
 ## External Dependencies
 
 ### Content Delivery Networks (CDNs)
-- **Google Fonts**: Inter font family for typography consistency
+- **Google Fonts**: Poppins font family for professional typography
 - **Font Awesome 6.4.0**: Icon library for UI elements and visual enhancement
+
+### Featured Extensions (Top 5)
+1. **Automatizador de Digitación** - From 2 hours to 5 minutes (most popular)
+2. **Convertor Web → Excel/Sheets** - Web scraping to organized spreadsheets
+3. **Analizador Google Drive** - Image quality analysis and direct download
+4. **Descargador Inteligente de Imágenes** - Smart bulk download with naming
+5. **Calculador de Porcentajes** - Automatic percentage calculations
+
+### Additional Extensions (11 mini-cards)
+- Copiador de Textos Avanzado, Organizador de Archivos, Extractor de Enlaces
+- Formateador de Datos, Capturador de Pantallas, Comparador de Precios
+- Generador de Códigos, Monitor de Páginas, Validador de Formularios
+- Sincronizador de Datos, Automatizador de Clicks
 
 ### Browser APIs
 - **Scroll API**: For navbar behavior and smooth scrolling functionality
