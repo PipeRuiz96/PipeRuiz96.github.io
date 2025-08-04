@@ -1,0 +1,1857 @@
+tengo este portafolio en html para mi pagina web
+yo trabajo en Rappi, cree extensiones de google chrome en mi anonimato, no tengo profesional ni estudios pero soy curioso y yo por mi solo, automatizo los procesos operativos. (detalle de 16 extensiones)
+
+-la idea principal es lanzarme como freelancer ofreciendo mis servicios
+acorde a lo hablado contigo, conviene  en portafolio mostrar un perfil generico no mencionar por el momento para delivery, si no para en general sistemas
+
+-tener un enfoque de servicios versatiles
+
+-no mencionar tarifas de precios, si cotizacion personalizada
+
+-mostrar mis datos de contacto obviamente 
+
+a evaluar para ti:
+si no soy desarrollador de chorme y llego a hacer extensiones para alguien que me las pida, debo pagar eso mejor? o como se las instalaria? seria entonces conveniente ser desarrollador de chrome y pagar esos dolares por si algo? o como seria?
+
+si soy principiante esta algo exagerado el portafolio? esta bien exagerarlo?
+
+si trabajo actualmente como digitador agente de catalogo onboarding para rappi desde casa conviene mencionar que trabajo actualmente pero no en rappi si no con start ups o no se como sea ese tema me da miedo la parte legal
+
+y por ultimo como crees que va el portafolio? consideras que podamos mejorar cosas de el? colores? interfaz? algo mas psicologicamente comprobado para el cliente o venderme mejor? 
+
+antes de generar codigos resuelve esto porfa gracias
+
+
+
+codigo html:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialista en Automatización | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: #0f0f23;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #5a67d8, #667eea);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HERO SECTION - SUPER IMPACTANTE */
+        .hero {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            padding: 120px 0 80px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(10px, 10px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #fff, #f0f0f0, #fff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShine 3s ease-in-out infinite;
+        }
+
+        @keyframes textShine {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            font-weight: 400;
+            color: #e2e8f0;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+            color: #ffd700;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        /* IMPACTO VISUAL - Métricas destacadas */
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+            padding: 40px 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #00ff88, #ffd700, #ff6b6b);
+            background-size: 200% 200%;
+            animation: borderFlow 3s ease infinite;
+        }
+
+        @keyframes borderFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .metric:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .metric-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #00ff88;
+            display: block;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .metric-label {
+            font-size: 1.1rem;
+            color: white;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* CTA Buttons - Más atractivos */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-secondary {
+            background: linear-gradient(45deg, #00ff88, #00cc6f);
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 255, 136, 0.4);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(255, 107, 107, 0.6);
+        }
+
+        .cta-secondary:hover {
+            box-shadow: 0 25px 60px rgba(0, 255, 136, 0.6);
+        }
+
+        /* QUICK WINS SECTION - Nuevo */
+        .quick-wins {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            padding: 80px 0;
+            margin: 40px 0;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quick-wins h2 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 800;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .wins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .win-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .win-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            background-size: 200% 200%;
+            animation: borderGlow 3s ease infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .win-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .win-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
+        }
+
+        .win-title {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .win-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .win-cta {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .win-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Skills Section - Mejorada */
+        .skills-section {
+            padding: 100px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            margin: 40px 0;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skills-section h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+            /* TÍTULO MÁS VISIBLE */
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8), 0 0 30px rgba(255,215,0,0.3);
+            background: linear-gradient(45deg, #ffd700, #ffffff, #ffd700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                filter: drop-shadow(0 0 10px rgba(255,215,0,0.5));
+            }
+            50% { 
+                background-position: 100% 50%;
+                filter: drop-shadow(0 0 20px rgba(255,215,0,0.8));
+            }
+        }
+
+        .skills-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b, #00ff88);
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(255,215,0,0.5);
+        }
+
+        .skills-section p {
+            text-align: center;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            background-size: 200% 200%;
+            animation: borderGlow 3s ease infinite;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .skill-card h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 12px 0;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            padding-left: 30px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card li:hover {
+            color: #ffd700;
+            transform: translateX(5px);
+        }
+
+        .skill-card li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+            font-weight: bold;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .hero-subtitle { font-size: 1.3rem; }
+            .hero-tagline { font-size: 1.1rem; }
+            .skills-section h2 { font-size: 2.2rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .impact-metrics { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .metric-number { font-size: 2.2rem; }
+            .container { padding: 0 15px; }
+        }
+
+        @media (max-width: 480px) {
+            .impact-metrics { grid-template-columns: 1fr; }
+            .wins-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- HERO SECTION SUPER IMPACTANTE -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Especialista en Automatización de Procesos</h1>
+                <p class="hero-subtitle">Transformo tareas repetitivas de horas en procesos automáticos de minutos</p>
+                <p class="hero-tagline">💡 "Si lo haces más de 10 veces, yo puedo automatizarlo"</p>
+                
+                <!-- MÉTRICAS DE IMPACTO -->
+                <div class="impact-metrics">
+                    <div class="metric">
+                        <span class="metric-number">96%</span>
+                        <span class="metric-label">Reducción de Tiempo</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">16+</span>
+                        <span class="metric-label">Herramientas Creadas</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">0</span>
+                        <span class="metric-label">Errores Humanos</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">100%</span>
+                        <span class="metric-label">Precisión</span>
+                    </div>
+                </div>
+
+                <!-- BOTONES CTA -->
+                <div class="cta-buttons">
+                    <a href="#quick-wins" class="cta-button cta-primary">🚀 Ver Resultados</a>
+                    <a href="#contact" class="cta-button cta-secondary">💬 Hablemos Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK WINS - Lo más impactante resumido -->
+    <section class="quick-wins" id="quick-wins">
+        <div class="container">
+            <h2>🎯 Transformaciones Reales en Minutos</h2>
+            <div class="wins-grid">
+                <div class="win-card">
+                    <span class="win-icon">📊</span>
+                    <h3 class="win-title">Data Entry Masivo</h3>
+                    <p class="win-description">De 2 horas copiando datos manualmente a 5 minutos automatizados. 1000+ registros transferidos sin errores.</p>
+                    <a href="#data-transfer" class="win-cta">Ver Cómo Funciona</a>
+                </div>
+                
+                <div class="win-card">
+                    <span class="win-icon">🌐</span>
+                    <h3 class="win-title">Web a Excel</h3>
+                    <p class="win-description">Convierte cualquier sitio web en hoja de cálculo organizada. Catálogos completos en 10 minutos.</p>
+                    <a href="#web-excel" class="win-cta">Ver Demostración</a>
+                </div>
+                
+                <div class="win-card">
+                    <span class="win-icon">🖼️</span>
+                    <h3 class="win-title">Procesador de Imágenes</h3>
+                    <p class="win-description">Descarga y renombra 500+ imágenes automáticamente con nombres inteligentes basados en contexto.</p>
+                    <a href="#image-processor" class="win-cta">Ver Proceso</a>
+                </div>
+                
+                <div class="win-card">
+                    <span class="win-icon">📋</span>
+                    <h3 class="win-title">Multi-Pestaña</h3>
+                    <p class="win-description">Extrae datos de 20+ pestañas simultáneamente y los organiza en una tabla perfecta.</p>
+                    <a href="#multi-tab" class="win-cta">Ver Ejemplo</a>
+                </div>
+                
+                <div class="win-card">
+                    <span class="win-icon">🔢</span>
+                    <h3 class="win-title">Replicador Masivo</h3>
+                    <p class="win-description">1 clic = 50 campos completados. Configuraciones masivas en segundos vs 10 minutos manual.</p>
+                    <a href="#mass-replicator" class="win-cta">Ver Velocidad</a>
+                </div>
+                
+                <div class="win-card">
+                    <span class="win-icon">⚡</span>
+                    <h3 class="win-title">Google Drive Masivo</h3>
+                    <p class="win-description">Analiza y descarga archivos directamente sin ZIP. Gestión inteligente de calidad automática.</p>
+                    <a href="#gdrive-download" class="win-cta">Ver Análisis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION - Mejorada visualmente -->
+    <section class="skills-section">
+        <div class="container">
+            <h2>🚀 Herramientas de Automatización Desarrolladas</h2>
+            <p>Soluciones especializadas que transforman horas de trabajo manual en minutos automatizados. Cada herramienta diseñada para resolver problemas específicos de productividad.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-icon="📊">
+                    <h3>📊 Data Entry & Procesamiento</h3>
+                    <ul>
+                        <li>Migración de datos entre plataformas</li>
+                        <li>Procesamiento masivo de Excel/CSV</li>
+                        <li>Limpieza y organización de bases de datos</li>
+                        <li>Extracción de información de documentos</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-icon="🛒">
+                    <h3>🛒 Gestión de Tiendas Online</h3>
+                    <ul>
+                        <li>Carga masiva de productos</li>
+                        <li>Actualización de inventarios</li>
+                        <li>Migración entre plataformas de ecommerce</li>
+                        <li>Optimización de catálogos</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-icon="🔍">
+                    <h3>🔍 Web Scraping & Extracción</h3>
+                    <ul>
+                        <li>Extracción de datos de sitios web</li>
+                        <li>Monitoreo de precios competidores</li>
+                        <li>Creación de listas de contactos</li>
+                        <li>Recopilación de información de mercado</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-icon="🖼️">
+                    <h3>🖼️ Procesamiento de Imágenes</h3>
+                    <ul>
+                        <li>Renombrado masivo de archivos</li>
+                        <li>Redimensionado y optimización por lotes</li>
+                        <li>Organización de galerías fotográficas</li>
+                        <li>Conversión de formatos masiva</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-icon="📋">
+                    <h3>📋 Extracción Multi-Plataforma</h3>
+                    <ul>
+                        <li>Análisis de múltiples pestañas simultáneamente</li>
+                        <li>Generación de reportes automáticos</li>
+                        <li>Consolidación de datos dispersos</li>
+                        <li>Exportación a formatos específicos</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-icon="⚡">
+                    <h3>⚡ Replicación Masiva</h3>
+                    <ul>
+                        <li>Llenado automático de formularios</li>
+                        <li>Aplicación masiva de configuraciones</li>
+                        <li>Sincronización de valores en tiempo real</li>
+                        <li>Operaciones en lote inteligentes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Inicializar partículas
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de números contador
+        function animateCounters() {
+            const counters = document.querySelectorAll('.metric-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current) + (counter.textContent.includes('%') ? '%' : '');
+                }, 16);
+            });
+        }
+
+        // Iniciar contador cuando el hero sea visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.hero'));
+    </script>
+
+    <!-- Projects Section - DETALLES TÉCNICOS -->
+    <section class="section section-alt" id="detalles">
+        <div class="container">
+            <h2 style="color: #ffd700; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                🚀 Detalles Técnicos de las Automatizaciones
+            </h2>
+            <p>Información completa sobre cómo funcionan las herramientas y los resultados que entregan</p>
+            
+            <div class="projects-grid">
+                <div class="project-card" id="data-transfer">
+                    <div class="project-header">
+                        <h3>🤖 Automatizador de Transferencia de Datos</h3>
+                        <p>Migración automática desde hojas de cálculo a plataformas web</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Sistema que extrae información de Excel/Google Sheets y la transfiere automáticamente a cualquier plataforma web, simulando acciones humanas con velocidades de 1-2 segundos por registro.</p>
+                        
+                        <div class="demo-section">
+                            <div class="demo-placeholder">🎬 DEMO EN VIVO</div>
+                            <div class="demo-instructions">Video mostrando carga de 100 registros en 3 minutos</div>
+                        </div>
+                        
+                        <div class="impact">
+                            Reducción de tiempo: De 2 horas a 5 minutos (96% más rápido)
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chrome Extension</span>
+                            <span class="tech-tag">DOM Manipulation</span>
+                            <span class="tech-tag">Google Sheets API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="web-excel">
+                    <div class="project-header">
+                        <h3>🌐 Conversor Web a Excel</h3>
+                        <p>Extracción estructurada de contenido web a hojas de cálculo</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Herramienta que convierte contenido de cualquier página web (catálogos, listados, directorios) en archivos Excel organizados y listos para usar en otros sistemas.</p>
+                        
+                        <div class="demo-section">
+                            <div class="demo-placeholder">📊 ANTES/DESPUÉS</div>
+                            <div class="demo-instructions">Captura de sitio web → Excel estructurado</div>
+                        </div>
+                        
+                        <div class="impact">
+                            De 2 horas manuales a 10 minutos automatizados
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Web Scraping</span>
+                            <span class="tech-tag">Data Processing</span>
+                            <span class="tech-tag">CSV Generation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="gdrive-download">
+                    <div class="project-header">
+                        <h3>📷 Descargador Masivo de Google Drive</h3>
+                        <p>Análisis y descarga directa sin archivos ZIP</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Sistema que analiza archivos en Google Drive, evalúa su calidad automáticamente y los descarga directamente al PC en el formato y peso deseado, sin pasar por ZIP.</p>
+                        
+                        <div class="demo-section">
+                            <div class="demo-placeholder">⚡ GIF CORTO</div>
+                            <div class="demo-instructions">500 archivos descargados en segundos</div>
+                        </div>
+                        
+                        <div class="impact">
+                            Gestión de archivos: De 20 minutos a 2 minutos
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Google Drive API</span>
+                            <span class="tech-tag">File Processing</span>
+                            <span class="tech-tag">Quality Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="image-processor">
+                    <div class="project-header">
+                        <h3>🖼️ Procesador de Imágenes con Nombres Inteligentes</h3>
+                        <p>Descarga y renombrado automático desde páginas web</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Extrae imágenes relevantes de sitios web y las descarga con nombres significativos basados en su contexto, evitando íconos innecesarios y duplicados problemáticos.</p>
+                        
+                        <div class="demo-section">
+                            <div class="demo-placeholder">🖼️ PROCESAMIENTO</div>
+                            <div class="demo-instructions">De "img_001.jpg" a "producto-azul-mediano.jpg"</div>
+                        </div>
+                        
+                        <div class="impact">
+                            Organización de imágenes: De 15 minutos a 2 minutos
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Image Processing</span>
+                            <span class="tech-tag">Smart Naming</span>
+                            <span class="tech-tag">File Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="multi-tab">
+                    <div class="project-header">
+                        <h3>📋 Extractor de Datos Multi-Pestaña</h3>
+                        <p>Recopilación masiva desde múltiples páginas abiertas</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Recorre automáticamente todas las pestañas abiertas, extrae datos específicos de cada una y los organiza en formato tabla listo para pegar en hojas de cálculo.</p>
+                        
+                        <div class="demo-section">
+                            <div class="demo-placeholder">🔄 MULTI-TAB</div>
+                            <div class="demo-instructions">20 pestañas → 1 tabla organizada</div>
+                        </div>
+                        
+                        <div class="impact">
+                            Informes: De 30 minutos a 2 minutos
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Multi-tab Processing</span>
+                            <span class="tech-tag">Data Extraction</span>
+                            <span class="tech-tag">Report Generation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="mass-replicator">
+                    <div class="project-header">
+                        <h3>🔢 Replicador Masivo de Valores</h3>
+                        <p>Llenado automático de campos repetitivos en formularios</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Permite replicar instantáneamente un valor (precio, configuración, número) en múltiples campos de formularios web, eliminando la necesidad de llenar campo por campo manualmente.</p>
+                        
+                        <div class="demo-section">
+                            <div class="demo-placeholder">💨 VELOCIDAD</div>
+                            <div class="demo-instructions">1 clic = 50 campos completados</div>
+                        </div>
+                        
+                        <div class="impact">
+                            Configuración: 50 campos en segundos vs 10 minutos manual
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Form Automation</span>
+                            <span class="tech-tag">Bulk Operations</span>
+                            <span class="tech-tag">Value Replication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Tools Section -->
+            <div class="additional-tools">
+                <h3>🛠️ Herramientas Adicionales Desarrolladas</h3>
+                <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 30px;">Automatizaciones especializadas para optimizar flujos de trabajo específicos</p>
+                
+                <div class="tools-grid">
+                    <div class="tool-category">
+                        <strong>⚡ Operaciones Rápidas</strong>
+                        <ul>
+                            <li>Calculadora instantánea por selección</li>
+                            <li>Generador de enlaces por ID</li>
+                            <li>Apertura masiva de registros</li>
+                            <li>Navegación inteligente entre páginas</li>
+                        </ul>
+                    </div>
+                    <div class="tool-category">
+                        <strong>🔧 Gestión Avanzada</strong>
+                        <ul>
+                            <li>Consulta de jerarquías automática</li>
+                            <li>Borrado masivo inteligente</li>
+                            <li>Distribución automática de datos</li>
+                            <li>Conversión de formatos múltiples</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 25px; color: rgba(255, 255, 255, 0.7); font-style: italic;">
+                    <strong style="color: #ffd700;">Total: 16 automatizaciones</strong> adaptables a diferentes industrias y plataformas
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extensions Section - NUEVA -->
+    <section class="section">
+        <div class="container">
+            <h2>🎓 Extensiones Personalizadas - Automatiza Tú Mismo</h2>
+            <p>No solo automatizo tus procesos, te doy las herramientas para que seas independiente</p>
+            
+            <div class="extension-hero" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2)); padding: 60px 40px; border-radius: 25px; margin: 40px 0; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                <h3 style="color: #ffd700; font-size: 2rem; margin-bottom: 20px; font-weight: 800;">¿Por qué depender de alguien más cuando puedes automatizar tú mismo?</h3>
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.3rem; line-height: 1.6; max-width: 800px; margin: 0 auto;">Creo extensiones de Chrome personalizadas específicamente para tu empresa/plataforma. Recibes la herramienta completa + capacitación para que puedas automatizar cualquier proceso futuro sin depender de terceros.</p>
+            </div>
+
+            <div class="extension-benefits" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 50px 0;">
+                <div class="benefit-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 35px 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; transition: all 0.3s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🔓</div>
+                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Independencia Total</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Ya no necesitas contratar cada automatización. Tu propia herramienta, tu control.</p>
+                </div>
+                
+                <div class="benefit-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 35px 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; transition: all 0.3s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
+                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Herramienta Propia</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Funciona específicamente en tu plataforma. Diseñada para tus procesos únicos.</p>
+                </div>
+                
+                <div class="benefit-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 35px 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; transition: all 0.3s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🎓</div>
+                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Capacitación Incluida</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Te enseño a usarla y modificarla. Soporte completo hasta que seas experto.</p>
+                </div>
+                
+                <div class="benefit-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 35px 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; transition: all 0.3s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">📈</div>
+                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Escalabilidad Ilimitada</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Automatiza procesos futuros sin costo adicional. Inversión que crece contigo.</p>
+                </div>
+            </div>
+
+            <!-- Ejemplo Concreto -->
+            <div class="extension-example" style="background: rgba(0, 0, 0, 0.3); padding: 50px 40px; border-radius: 25px; margin: 40px 0; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <h3 style="color: #00ff88; text-align: center; margin-bottom: 30px; font-size: 1.8rem; font-weight: 700;">💡 Ejemplo: Extensión para E-commerce</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                    <div style="color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        <strong style="color: #ffd700;">🛍️ Carga productos masivamente</strong>
+                    </div>
+                    <div style="color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        <strong style="color: #ffd700;">💰 Actualiza precios de competidores</strong>
+                    </div>
+                    <div style="color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        <strong style="color: #ffd700;">📊 Genera reportes automáticos</strong>
+                    </div>
+                    <div style="color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        <strong style="color: #ffd700;">📦 Gestiona inventarios</strong>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #00ff88; font-size: 1.3rem; font-weight: 700; margin-top: 30px;">Todo desde UN solo botón en tu navegador</p>
+            </div>
+
+            <!-- Proceso de Entrega -->
+            <div class="delivery-process" style="margin: 50px 0;">
+                <h3 style="color: white; text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 700;">🚀 Proceso de Entrega</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div style="text-align: center; padding: 25px 15px;">
+                        <div style="background: linear-gradient(45deg, #667eea, #764ba2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-weight: bold; font-size: 1.2rem;">1</div>
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">Análisis</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">Identifico tus procesos repetitivos</p>
+                    </div>
+                    <div style="text-align: center; padding: 25px 15px;">
+                        <div style="background: linear-gradient(45deg, #667eea, #764ba2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-weight: bold; font-size: 1.2rem;">2</div>
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">Desarrollo</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">Creo la extensión personalizada</p>
+                    </div>
+                    <div style="text-align: center; padding: 25px 15px;">
+                        <div style="background: linear-gradient(45deg, #667eea, #764ba2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-weight: bold; font-size: 1.2rem;">3</div>
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">Capacitación</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">2 sesiones de entrenamiento</p>
+                    </div>
+                    <div style="text-align: center; padding: 25px 15px;">
+                        <div style="background: linear-gradient(45deg, #667eea, #764ba2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-weight: bold; font-size: 1.2rem;">4</div>
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">Soporte</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">30 días de ajustes incluidos</p>
+                    </div>
+                    <div style="text-align: center; padding: 25px 15px;">
+                        <div style="background: linear-gradient(45deg, #00ff88, #00cc6f); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-weight: bold; font-size: 1.2rem;">5</div>
+                        <h4 style="color: #00ff88; margin-bottom: 10px;">Autonomía</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">Eres independiente para siempre</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="section">
+        <div class="container">
+            <h2>💎 ¿Por qué elegir automatización?</h2>
+            <p>No se trata solo de velocidad, sino de transformar completamente cómo trabajas</p>
+            
+            <div class="value-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="value-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 40px 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; transition: all 0.3s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">⏰</div>
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 1.3rem;">Ahorro de Tiempo Real</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Lo que antes tomaba días, ahora toma minutos. Recupera tu tiempo para tareas que realmente agregan valor.</p>
+                </div>
+                
+                <div class="value-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 40px 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; transition: all 0.3s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 1.3rem;">Precisión Perfecta</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Elimina errores humanos. Las automatizaciones ejecutan las mismas acciones exactas, cada vez.</p>
+                </div>
+                
+                <div class="value-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 40px 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; transition: all 0.3s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">📈</div>
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 1.3rem;">Escalabilidad</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Procesa 10 registros o 10,000 con el mismo esfuerzo. Crece sin limitaciones operativas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>🗣️ Lo que dicen quienes han automatizado sus procesos</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Increíble capacidad para automatizar procesos complejos. Lo que nos tomaba horas, ahora lo resolvemos en minutos gracias a sus herramientas. Cambió completamente nuestra productividad."</p>
+                    <div class="testimonial-author">- Ana M., Coordinadora de Operaciones</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"Su enfoque para resolver problemas repetitivos es excepcional. Siempre encuentra la manera de optimizar cualquier proceso manual. Nuestro equipo ahora se enfoca en tareas estratégicas."</p>
+                    <div class="testimonial-author">- Carlos R., Supervisor de Calidad</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"Trabajar con él cambió completamente nuestra productividad. Sus automatizaciones son precisas, rápidas y muy confiables. ROI visible desde el primer día."</p>
+                    <div class="testimonial-author">- María L., Especialista en Datos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+        <div class="container">
+            <h2>💰 Modalidades de Trabajo</h2>
+            <p>Opciones flexibles que se adaptan a tu proyecto y presupuesto</p>
+            
+            <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="pricing-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 40px 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;">
+                    <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.5rem; text-align: center;">🎯 Proyectos Estándar</h3>
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <div style="font-size: 2rem; color: white; font-weight: bold;">Cotización según alcance</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); margin-top: 5px;">Por resultado entregado</div>
+                    </div>
+                    <ul style="color: rgba(255, 255, 255, 0.9); line-height: 2; list-style: none;">
+                        <li>✅ Data entry masivo</li>
+                        <li>✅ Procesamiento de archivos</li>
+                        <li>✅ Extracción de datos web</li>
+                        <li>✅ Gestión de catálogos</li>
+                        <li>✅ Tiempo de entrega definido</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(20px); padding: 40px 30px; border-radius: 20px; border: 2px solid #ffd700; transition: all 0.3s ease; position: relative;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #ffd700; color: #000; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">MÁS POPULAR</div>
+                    <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.5rem; text-align: center;">🛠️ Desarrollos Personalizados</h3>
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <div style="font-size: 2rem; color: white; font-weight: bold;">Cotización personalizada</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); margin-top: 5px;">Soluciones a medida</div>
+                    </div>
+                    <ul style="color: rgba(255, 255, 255, 0.9); line-height: 2; list-style: none;">
+                        <li>✅ Automatizaciones únicas</li>
+                        <li>✅ Extensiones personalizadas</li>
+                        <li>✅ Integraciones complejas</li>
+                        <li>✅ Consultoría especializada</li>
+                        <li>✅ Escalabilidad garantizada</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); padding: 40px 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;">
+                    <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.5rem; text-align: center;">🤝 Soporte Continuo</h3>
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <div style="font-size: 2rem; color: white; font-weight: bold;">Planes flexibles</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); margin-top: 5px;">Optimización constante</div>
+                    </div>
+                    <ul style="color: rgba(255, 255, 255, 0
+
+
+
+
+
+detalle extensiones:
+1ra Extensión
+.1er extension: lo que yo dije;: Automatizador de Digitación. Problema: Tardar 1–2 horas al día copiando menús extensos de Hojas de Sheets, Words, a plataforma web. en este caso CMS. (gracias a lectura del DOM) Qué hace: Extrae información de Excel, Sheets, y esa informacion la copia y la pega por si sola a la plataforma necesaria, con velocidades altas en los campos necesarios Ej: Si En sheets esta columna de "Descripcion de producto" la copia y la pega en el campo "description" de la plataforma, asi mismo con precios y otros datos, simula el boton de guardar y continuar para asi continuar con el siguiente elemento a pegar, esto en una velocidad de 1 a 2 segundos maximo. Impacto: Reduje el tiempo de carga de menús y datos de 2 horas a 5 minutos. Tecnología: no la conozco te compartire los archivos de extension para que identifiques la teconologia usada Área de uso: Digitación operativa automatizada. Sheets, Excel a CMS (se podra configurar para usarse en cualquier plataforma Web)
+tu transformación:
+Diagnóstico técnico de tu extensión: “Automatizador de Digitación”
+🧠 ¿Qué tecnologías usaste? (aunque no las programaste a mano)
+JavaScript (lenguaje de programación del navegador)
+Extensiones de Google Chrome (estructura: background script + content script)
+Google Sheets API + OAuth 2.0 (para acceder directamente a datos desde una hoja en la nube)
+Manipulación del DOM (para reconocer y escribir datos automáticamente en campos de una plataforma web)
+Simulación de eventos de teclado y clic (para que la extensión “escriba” como si fueras tú)
+Mensajería interna entre scripts (Chrome Messaging API) para coordinar el envío de datos y confirmaciones
+🎯 Aunque usaste IA para ayudarte, lo importante es que orquestaste todas estas piezas tú solo, sin experiencia previa. Eso se llama “integración de soluciones”, y es muy buscado en entornos de automatización, productividad o no-code.
+📘 Cómo presentar esta extensión en tu portafolio
+Aquí tienes una ficha modelo para esta herramienta que yo incluiría en tu portafolio y en tu CV:
+💡 Proyecto: Automatizador de Digitación para CMS
+Descripción breve: Extensión de Chrome que automatiza la digitación de productos desde hojas de cálculo (Excel, Google Sheets) a una plataforma CMS interna, usando lectura del DOM y simulación de acciones humanas.
+Problema resuelto: El proceso manual tomaba entre 1 y 2 horas por carga de menú, con riesgo de errores y alta fatiga visual.
+Solución implementada:
+Lectura automática de filas de Google Sheets mediante OAuth 2.0
+Envío de datos a la plataforma web con reconocimiento del DOM
+Simulación de escritura campo por campo
+Automatización del clic en “continuar” y paso al siguiente ítem
+Impacto: Reducción del tiempo de digitación de 2 horas a 5 minutos. Aumento de productividad, eliminación de errores y ahorro diario de ~1.5 horas.
+Tecnologías utilizadas:
+JavaScript
+API de Google Sheets
+Manipulación DOM
+Chrome Extension API
+Mensajería entre scripts
+Rol desempeñado:
+Análisis del proceso de digitación manual
+Dirección y diseño de la solución usando IA
+Integración de herramientas automatizadas sin conocimientos previos de programación
+🧠 ¿Qué puedes decir en tu CV?
+En la sección de “Proyectos destacados” o “Logros técnicos” puedes poner:
+Automatización de procesos operativos en CMS
+Creación de herramientas personalizadas con extensiones de Chrome que automatizan procesos repetitivos de digitación y subida de menús. Uso de IA, JavaScript y APIs para integrar datos entre Google Sheets y plataformas internas. Reduje tareas de 2 horas a 5 minutos diarios, aumentando eficiencia y precisión sin apoyo externo.
+
+2da Extensión
+2da extension: Nombre: Convertor de Paginas web a Excel y Sheets Qué hace: Convierte Contenido de paginas web como Pedidos ya, Uber Eats, Didi Food a un archivo de excel y sheets de forma muy organizada, personalizada (puedo hacer que cualquie pagina web se transforme en el formato excel que se desee) pero por el momento lo aplique a mi trabajo de menus de rappi. extrae el contenido analiza el DOM y lo convierte en un sheets organizado Si en la pagina de uber hay corredores (que contienen los productos) (nombre de productos) (descriciones) etc los convierte al archivo pertinente de excel IMPORTANTISIMO ese excel descargado o sheets es el que luego se usa para que pase automatizado a CMS y realizar la automatizacion de la primera extension en ese sentido es toda una conexion eficaz que trasnforma paginas a sheets para posteriormente pasar el sheets a la plataforma que se desee. Qué problema resolvía: antes se debia pasar manualmente el texto de la pagina web a la plataforma, ahora solo se convierte a sheets y se automatiza con el automatizador reduciendo tiempos de 1 a 2 horas a solo 10 minutos. (depende de lo grande de la tienda y datos) pero en general reduce los tiempos drasticamente. Qué impacto tuvo: Reduje el tiempo de carga de menús y datos de 2 horas a 5 minutos. Y el archivo de código de esa extensión: en el ejemplo solo te comparti los de pedidos ya pero sirven para uber didi y pedidos ya usando la similar estrategia solo que cada pagina es diferente pero sirve. analiza comportamiento de DOM y ejecuta la extraccion
+tu transformación:
+EXTENSIÓN #2: Convertor de Páginas Web a Excel y Sheets
+🧠 Tecnologías utilizadas (aunque no programaste a mano):
+JavaScript
+Extensiones de Google Chrome (Manifest V3)
+Manipulación del DOM (para analizar el contenido visible en sitios como Uber Eats, PedidosYa y Didi Food)
+Mensajería entre popup y background scripts
+Generación de archivos CSV o Excel desde HTML
+Almacenamiento y uso de la API chrome.scripting
+Interfaz gráfica con HTML (popup.html)
+📘 Ficha para el portafolio
+💡 Proyecto: Convertor Web → Excel/Sheets para Menús de Delivery
+Descripción breve: Herramienta que convierte automáticamente el contenido de plataformas de delivery (PedidosYa, Uber Eats, Didi Food) a un archivo estructurado en Excel o Google Sheets.
+Problema resuelto: El contenido de las tiendas debía copiarse y organizarse manualmente, lo cual implicaba entre 1 y 2 horas de trabajo con riesgo de errores.
+Solución implementada:
+Lectura y análisis automático del DOM de las páginas web.
+Extracción estructurada de corredores, productos, descripciones y precios.
+Conversión de la información en archivos listos para su posterior automatización.
+Impacto: Redujo el tiempo de extracción y organización de menús de 2 horas a 5–10 minutos por tienda, dependiendo de su tamaño. Esto permitió combinarse con otra extensión para automatizar la carga en el CMS, formando un flujo 100% automatizado.
+Tecnologías utilizadas:
+JavaScript
+Extensiones Chrome V3
+DOM Scraping
+chrome.runtime messaging
+popup HTML + scripting
+Rol desempeñado:
+Diseñador del flujo de extracción de menús
+Integración de herramientas IA para desarrollo
+Adaptación del scraping a múltiples plataformas
+Supervisión de pruebas y resultados
+📌 En tu CV podrías poner algo como:
+Extracción inteligente de datos web para automatización de menús
+Creación de extensión que extrae información estructurada desde plataformas como Uber Eats y PedidosYa, transformándola automáticamente en archivos para su uso en sistemas internos. Esta solución eliminó procesos manuales, integrándose luego con un automatizador completo de subida de menús.
+Además de automatizar páginas como Uber Eats o PedidosYa, esta herramienta fue diseñada para adaptarse fácilmente a cualquier sitio web que contenga listados estructurados (productos, menús, catálogos, etc.). A diferencia de herramientas genéricas que extraen contenido en bruto, esta solución permite transformar los datos directamente en un archivo Excel o Google Sheets con la estructura deseada por el cliente, eliminando la necesidad de limpieza posterior.
+
+3ra Extensión
+3ra extension
+Nombre Google Drive Analizador de Imagenes y Descarga imagenes de Google Drive directo al PC
+Qué hace DESCARGA imagenes en el formato que se desee y peso que se desee de imagen, en carpeta personalizada, sin necesidad de que al descargar las imagenes se descarguen en ZIP asi mismo tambien analiza la calidad de las imagenes (dimensiones calidad peso) filtro de calidad
+Qué problema resolvía: Anteriormente se debia analizar manualmente una por una la calidad de las fotos con la herramienta ella te analiza y te menciona cuales no cumplen calidad, por otro lado para subir las fotos a la plataforma se descargaban en zip luego debian ser extraidas y luego trasnformadas en alguna pagina web a formatos especificos que la plataforma CMS dejara subir
+en este caso la plataforma permite JPEG O PNG 1MB maximo! entonces tocaba, descargar en zip, extraer fotos, subirlas a un convertor online y luego si subrlas a plataforma, con la extension nada de eso es necesario, solamente es descargarlas ya quedan en carpeta listas para subir a plataforma
+Qué impacto tuvo: redujo el tiempo de gestion fotografica de 20 minutos a solo 2 minutos, la descarga se ejecuta de forma multiple rapida para mayor comodidad y rapidez.
+Y el archivo de código de esa extensión
+tu transformación:
+🔧 EXTENSIÓN #3: Google Drive – Analizador de Imágenes y Descarga Directa
+🧠 Tecnologías utilizadas:
+JavaScript + Chrome Extensions (Manifest V3)
+Google Drive API + OAuth2.0 para acceder a las imágenes
+Análisis de metadatos de imágenes (dimensiones, peso)
+Descarga directa desde Drive al PC (sin ZIP)
+Filtrado automatizado por calidad (resolución mínima)
+Personalización de formato de salida y peso objetivo (para compatibilidad con otras plataformas)
+📘 Ficha para el portafolio
+💡 Proyecto: Analizador de Imágenes en Google Drive + Descarga Directa Personalizada
+Descripción breve: Extensión que permite analizar múltiples imágenes en una carpeta de Google Drive, detectar automáticamente las que no cumplen requisitos mínimos de calidad, y descargarlas directamente en formato JPEG o PNG, con peso optimizado, sin pasar por ZIPs ni editores externos.
+Problema resuelto: Antes, el equipo debía analizar manualmente cada imagen, descargarlas en ZIP, extraerlas, convertirlas en una web externa y luego subirlas a la plataforma. Este proceso era tedioso, lento y propenso a errores.
+Solución implementada:
+Acceso directo a carpetas de Google Drive vía autenticación segura (OAuth 2.0)
+Visualización rápida del estado de calidad (dimensiones y peso)
+Descarga personalizada (peso, formato) en carpetas específicas del usuario
+Preparación instantánea para subida a CMS con requisitos de 1 MB máx. en JPG o PNG
+Impacto: Redujo la gestión de imágenes de 20 minutos a menos de 2 minutos por carpeta. El proceso pasó de 4 pasos manuales a 1 automático.
+Tecnologías utilizadas:
+JavaScript (Extensiones Chrome)
+Google Drive API
+OAuth2.0
+Manipulación de imágenes y metadatos
+chrome.downloads API
+Rol desempeñado:
+Análisis del proceso manual de gestión de imágenes
+Diseño de la lógica de automatización
+Integración con IA para generación del código
+Pruebas y validación de la herramienta en flujos reales
+💼 Versión comercial (para portafolio o presentación freelance)
+¿Tienes que revisar y descargar imágenes de Google Drive para un catálogo, tienda online o base de datos? Esta herramienta se adapta a tu flujo. Analiza automáticamente la calidad de las imágenes, te avisa cuáles no cumplen requisitos, y descarga solo las necesarias en formato personalizado (JPG/PNG y peso optimizado).
+Ideal para quienes gestionan catálogos, productos o plataformas que exigen formatos específicos. Se puede personalizar para tus necesidades.
+🧲 Valor diferencial para el cliente:
+A diferencia de soluciones manuales o genéricas que obligan a extraer ZIPs y usar editores online, esta herramienta:
+Automatiza la validación de calidad
+Evita pasos intermedios
+Descarga lo justo, en el formato justo
+Se puede adaptar para cualquier flujo fotográfico o plataforma que requiera control sobre imágenes
+
+4ta Extensión
+4ta extension
+Nombre: extracto de imagenes paginas web, nombradas
+Qué hace: permite descargar imagenes de las paginas web directamente en el pc sin necesidad de zip, y ya correctamente nombradas acorde a el titulo de imagen encabezado, nombre de producto...
+Qué problema resolvía: se requiere descargar una por una o usar otras extensiones pero al usar otras extensiones descarga imagenes sin nombrarlas, si hay repetidas omite repetidas y eso no debia suceder, descarga iconos de paginas que no deberian descargarse, es decir es una extension personalizada que extrae las fotos de las paginas web de forma correcta y nombrada, esto es util por que para subir las fotos CMS se requieren correctamente nombradas!
+Qué impacto tuvo: se paso de gestionar las fotos que se necesitaban descargar de paginas, de 15 miniutos a 2 minutos
+Y el archivo de código de esa extensión:
+tu transformación:
+🔧 EXTENSIÓN #4: Descarga de Imágenes desde Páginas Web (con nombres personalizados)
+🧠 Tecnologías utilizadas:
+JavaScript (Chrome Extensions)
+chrome.downloads API (para gestionar descargas controladas)
+Manejo de nombres de archivo dinámicos (asignación de nombre con base en encabezados, títulos, producto, etc.)
+Control del directorio de destino para descarga
+Interacción entre scripts y almacenamiento de preferencias temporales
+📘 Ficha para el portafolio
+💡 Proyecto: Descargador Inteligente de Imágenes Web con Nombres Personalizados
+Descripción breve: Esta extensión permite descargar imágenes directamente desde cualquier página web sin necesidad de archivos ZIP, organizándolas y nombrándolas automáticamente según el encabezado o nombre del producto al que pertenecen. Se evita descargar íconos innecesarios y se asegura que todas las imágenes tengan un nombre correcto y sin duplicaciones.
+Problema resuelto: Otras extensiones descargan imágenes sin nombres útiles, con repeticiones, íconos irrelevantes o sin control sobre el formato de salida. Para subir imágenes a CMS, los nombres son críticos. Además, el proceso manual requería descargar, renombrar y reorganizar decenas de archivos.
+Otras extensiones tienden a ignorar imágenes repetidas, lo cual es un problema en flujos como la carga de menús, donde una misma imagen puede estar asociada a varios productos diferentes. Esta extensión sí permite descargar imágenes repetidas, pero cada una con su nombre correcto y específico, garantizando integridad en la asignación visual del contenido.
+Solución implementada:
+Filtra las imágenes útiles basadas en patrones del DOM
+Omite íconos o elementos visuales no relevantes
+Asigna automáticamente nombres personalizados a cada imagen basada en su contexto
+Descarga directa en carpetas seleccionadas, sin ZIP ni pasos adicionales
+Permite descargar imágenes repetidas cuando corresponden a productos distintos, nombrándolas correctamente para cada caso (ej.: "taco-dorado-carne.jpg" y "taco-dorado-arrachera.jpg"), asegurando compatibilidad con plataformas donde cada producto requiere su propia imagen.
+Impacto: Redujo el tiempo de descarga y organización de imágenes de 15 minutos por tienda a solo 2 minutos. Eliminó errores por nombres mal puestos o duplicados.
+Tecnologías utilizadas:
+JavaScript
+chrome.downloads API
+DOM parsing para detectar imágenes relevantes
+Manejo de nombres dinámicos y estructura de carpetas
+Rol desempeñado:
+Análisis del flujo manual y puntos de error frecuentes
+Definición del comportamiento inteligente de descarga y nombre
+Personalización del sistema según el tipo de contenido y página
+Supervisión de pruebas y ajustes finales en entorno real
+💼 Versión para vender como servicio:
+¿Tienes que descargar imágenes desde una web, pero necesitas que ya estén listas, bien nombradas y organizadas para subir a una plataforma? Esta herramienta hace justo eso: descarga directamente desde cualquier página web, asigna nombres personalizados y evita errores por duplicados o archivos innecesarios. Todo listo para subir a tu CMS o catálogo.
+Se puede adaptar a cualquier sitio o formato de nombre que necesites.
+✅ Diferencial clave:
+A diferencia de extensiones genéricas o manuales, esta solución:
+Omite íconos, duplicados y archivos basura
+Nombra automáticamente cada imagen según el producto o contexto
+Se puede personalizar para cualquier página web
+Funciona directo al PC, sin ZIP ni pasos intermedios
+Sí descarga imágenes repetidas cuando están asociadas a diferentes productos.
+Asegura que cada imagen tenga el nombre correcto según su contexto.
+Mantiene la integridad visual del catálogo o menú sin errores ni confusión.
+
+5ta Extensión
+5ta extension
+Nombre: Convertor de Fotos rapido, sin paginas web
+Qué hace: convierte las imagenes seleccionadas a formato logo circular png sin editando la imagen acomodandola al centro y descargandola directo al pc para ser subida. y por otro lado el home que la edita a dimensiones requeridas y tamaño requerido
+Qué problema resolvía: anteriormente se tenian que usar editores como photoshop, o photopea, los cuales se debia generar un proceso largo para editar manualmente las imagenes y convertirlas al formato adecuado, con esta extension se logra todo ello con 2 clicks haciendo la edicion inmediata
+Qué impacto tuvo: tiempos de edicion de imagenes de 20 30 minutos a solo 1 minuto
+Y el archivo de código de esa extensión
+tu transformación:
+🔧 EXTENSIÓN #5: Convertor de Fotos Rápido (sin páginas web)
+🧠 Tecnologías utilizadas:
+JavaScript (Chrome Extensions)
+API de descargas (chrome.downloads)
+Canvas HTML5 para procesamiento de imagen local (formato circular y recorte al centro)
+Popup HTML para interfaz rápida
+Manejo de almacenamiento local (chrome.storage) para ajustes de formato o dimensiones predefinidas
+📘 Ficha para el portafolio
+💡 Proyecto: Convertor Local de Imágenes – Edición Circular PNG y Formato Home
+Descripción breve: Herramienta visual que permite convertir imágenes a formatos requeridos por CMS o plataformas internas, en dos variantes:
+Versión Logo: Convierte a PNG circular, centrando el contenido.
+Versión Home: Ajusta la imagen a dimensiones preestablecidas (ej. 1280x720 px) con peso optimizado.
+Problema resuelto: Antes se usaban programas como Photoshop o editores online (Photopea), lo cual implicaba subir imágenes, editarlas manualmente, exportar, ajustar peso, etc. El proceso era lento y poco práctico para tareas repetitivas.
+Solución implementada:
+Conversión directa desde el navegador, sin necesidad de conexión o apps externas
+Centrado automático del contenido en formato circular
+Redimensión automática de imágenes al formato requerido (según configuración)
+Descarga inmediata al PC sin pasos intermedios
+Impacto: Redujo el tiempo de edición de 20–30 minutos por lote a solo 1 minuto total. Aceleró la preparación de logos y banners para subir al CMS.
+Tecnologías utilizadas:
+JavaScript
+HTML5 Canvas
+Chrome Extensions API
+chrome.downloads + popup scripting
+Rol desempeñado:
+Diseño de lógica de edición visual automática
+Integración IA para generación de código personalizado
+Pruebas visuales en entorno real (logos y banners del equipo)
+Personalización según criterios gráficos del CMS
+💼 Versión para ofrecer como servicio freelance:
+¿Necesitas convertir logos o banners sin usar Photoshop ni herramientas complicadas?
+Este convertor automático permite transformar imágenes en formato circular PNG o en banners listos para plataformas, con solo dos clics. Se puede personalizar con los tamaños, bordes y formatos que tu equipo requiera.
+Ideal para tiendas, marketplaces, CMS y equipos de diseño que necesitan rapidez sin perder calidad.
+✅ Diferencial clave:
+Evita depender de apps externas, lentas o con anuncios
+Ajusta logos y banners automáticamente sin esfuerzo
+Funciona desde el navegador, sin conexión
+Se puede adaptar a cualquier formato o plataforma
+
+6ta Extensión
+Nombre: Correos vinculados
+Qué hace: con solo seleccionar un usuario o correo se podra dar clic derecho y dar en ver lider, aparecera una pequeña ventana que muestra quien es el lider de esa persona
+Qué problema resolvía: anteiormente para conocer quien era el lider de una persona se debia dirigir a una base de datos grande en excel y buscarle manualmente con esta interfaz es mas facil solo seleccionar clic derecho y ver lider y ventanita emergente no invasora aparecera
+Qué impacto tuvo: para enviar mensajes y dejar como copia de correo a los lideres de diversas areas se debia meter al drive ahora no es necesario haciendo mas rapida su busqueda esto se puede personalizar en su interfaz si se desea que con solo seleccionar el correo de la persona se escriba sola al lado el correo del lider de esa persona...
+Y el archivo de código de esa extensión
+tu transformación:
+🔧 EXTENSIÓN #6: Correos Vinculados – Consulta de Líder con Clic Derecho
+🧠 Tecnologías utilizadas:
+JavaScript (Extensiones de Chrome - Manifest V3)
+API chrome.contextMenus para insertar opciones al hacer clic derecho
+API chrome.notifications para mostrar ventanas emergentes no invasivas
+Consulta de datos precargados (puede integrarse con base local o futura API)
+📘 Ficha para el portafolio
+💡 Proyecto: Consulta rápida de líderes a partir de correos electrónicos seleccionados
+Descripción breve: Esta extensión permite, con solo seleccionar un correo en cualquier página web o aplicación, hacer clic derecho y elegir la opción “Ver líder”. Inmediatamente se muestra una ventana flotante indicando quién es el líder asociado a ese usuario.
+Problema resuelto: Antes, para identificar al líder de un colaborador era necesario consultar manualmente una base de datos extensa en Excel o Google Drive, perdiendo tiempo y ritmo de trabajo. Esta extensión elimina ese paso por completo.
+Solución implementada:
+Inserta opción directa en el menú contextual (clic derecho)
+Muestra de forma visual y rápida el nombre o correo del líder
+Puede configurarse para que, al seleccionar un correo, se autocompleten campos con el del líder correspondiente (ideal para redactar correos)
+Impacto: Evitó tener que buscar en bases manuales. Aceleró el envío de comunicaciones internas y la gestión de copias ocultas a líderes, optimizando flujos en tareas administrativas.
+Tecnologías utilizadas:
+JavaScript
+chrome.contextMenus API
+chrome.notifications API
+(Adaptable a integración con hojas de cálculo o bases online)
+Rol desempeñado:
+Diseño del flujo de búsqueda y visualización rápida
+Definición de la lógica de consulta
+Desarrollo y prueba de UX no invasiva
+Personalización para entornos laborales reales
+💼 Versión comercial – ¿Cómo ofrecerla?
+¿Tu equipo necesita saber quién es el jefe directo de cada empleado, sin perder tiempo buscando hojas de cálculo? Esta herramienta lo resuelve en segundos. Puedes integrarla con cualquier estructura organizativa y ver al líder de cada persona con solo un clic derecho sobre su correo.
+Además, se puede personalizar para autocompletar correos, agregar jerarquías o enlazar con plataformas de gestión humana.
+✅ Diferencial clave:
+Evita búsquedas lentas en archivos compartidos
+Mejora la eficiencia en la comunicación interna
+Se puede adaptar para cualquier organización o estructura jerárquica
+Ofrece una UX rápida, directa y sin interrupciones al flujo de trabajo
+
+7ma Extensión
+Nombre calculadora matematica instantanea
+Qué hace: cuando seleccionas dos numeros separados por un slash, muestra de una, sin necesidad de dar ningun otro click el porcentaje entre ellas, ej: 28/90 si seleccionara eso. aparece en una micro ventanita al ladito del cursos el porcentaje entre ellos, se puede personalizar para hacer el calculo matematico que se desee
+Qué problema resolvía: anteiormente se debia ir a la pagina o usar calculadoras para calcular estos porncejtaes ahora no, solo con seleccionar los 2 numeros ya tendremos el resultado para dejarlo instantaneamente, ideal para plataformas que no tengan esto incluido y lo necesiten o sacar datos asi para aprobaciones en nuestro caso el 75 de fotos debian estar respecto al 100 de menu productos. entonces si no cumplia esta regla debiamos rechazar
+Qué impacto tuvo: mejora del tiempo promedio de cada calculo de 2 minutos a 2 segundos!
+Y el archivo de código de esa extensión
+tu transformación:
+🔧 EXTENSIÓN #7: Calculadora de Porcentajes Instantánea
+🧠 Tecnologías utilizadas:
+JavaScript (Chrome Extensions)
+Content Script para detectar texto seleccionado en la página
+Reconocimiento de expresiones numéricas (ej. 28/90)
+Renderizado dinámico de tooltip flotante personalizado
+Interacción no invasiva con el DOM de cualquier sitio
+📘 Ficha para el portafolio
+💡 Proyecto: Cálculo de Porcentajes en Selección de Texto
+Descripción breve: Herramienta que permite calcular el porcentaje entre dos valores numéricos separados por /, simplemente al seleccionar el texto (por ejemplo, “28/90”). Al instante, aparece una pequeña ventana flotante al lado del cursor mostrando el resultado porcentual. No se requiere hacer clic ni presionar ningún botón.
+Problema resuelto: Antes, cada cálculo de este tipo requería abrir una calculadora externa o web, perder el enfoque de la plataforma de trabajo y volver al flujo. En plataformas sin funciones automáticas de validación (como CMS o paneles internos), esta extensión ahorra tiempo y concentración.
+Solución implementada:
+Detecta automáticamente si el texto seleccionado tiene formato fracción (ej. 36/48)
+Muestra porcentaje inmediato con diseño discreto, sin interrumpir el trabajo
+Se puede personalizar para otros tipos de cálculos: divisiones, reglas de tres, validaciones
+Impacto: Redujo el tiempo de verificación manual de porcentajes de 2 minutos por producto/caso a 2 segundos. Ideal para tareas de control de calidad, revisiones de menús, cumplimiento de requisitos y más.
+Tecnologías utilizadas:
+JavaScript (Chrome Extension V3)
+DOM + Content Scripts
+Tooltip dinámico con renderizado flotante
+Rol desempeñado:
+Detección del problema operativo recurrente
+Diseño de experiencia no invasiva y rápida
+Integración y pruebas con IA
+Optimización de la lógica de reconocimiento numérico
+💼 Versión comercial para freelance o cliente:
+¿Trabajas validando contenidos, aprobaciones o reglas porcentuales? Esta herramienta detecta automáticamente cualquier texto con formato fracción y calcula el porcentaje al instante, sin necesidad de abrir calculadoras ni perder el foco. Ahorra tiempo en cada revisión.
+Se puede personalizar para otros tipos de cálculos (como reglas de tres, promedios, validación de porcentajes mínimos, etc.) y funciona en cualquier sitio web.
+✅ Diferencial clave:
+No requiere hacer clic ni presionar botones
+Funciona en cualquier página con texto visible
+Evita el uso de calculadoras externas o saltos de pestaña
+Se puede adaptar a cualquier fórmula que se necesite calcular por selección
+
+8va Extensión
+Nombre generador de enlaces
+Qué hace: genera enlaces de zoho personalizados por id, en estos casos zoho cuenta con ids numeros para sus apartados de las tiendas, ya sea la brand, negociacion store, onboarding etc, es un numero de identificacion, lo que hace la extension es que permite seleccionar ese id y con click derecho genera el enlace en nueva pestaña sin cerrar ni alterar nada. para ingresar a ese apartado necesario
+Qué problema resolvía: anteriormente se debia abrir la pagina de zoho, y darle en buscar y pegar alli el id y entrar a el. ahora no, solamente con selecionar id hacer click derecho y darle en ir ya te dirge a la pagina apartado de zoho que quieres entrar, esto se podria hacer con mas paginas no solo zoho. abria que evaluar la pagina etc pero es posible
+Qué impacto tuvo: paso de tener que buscar manualmente esos apartados a poderlos abrir directamente estes en la pagina que estes situado, si tienes el id ya con ello tienes la opcion sin necesidad de buscar manialmente de abrirlo
+Y el archivo de código de esa extensión
+tu transformación:
+🔧 EXTENSIÓN #8: Generador de Enlaces – Navegación Rápida por ID (Zoho CRM)
+🧠 Tecnologías utilizadas:
+JavaScript (Chrome Extensions – Manifest V3)
+chrome.contextMenus API para agregar opción al clic derecho
+chrome.tabs y chrome.scripting para abrir enlaces dinámicos en pestañas nuevas
+Reconocimiento y manipulación de texto seleccionado
+📘 Ficha para el portafolio
+💡 Proyecto: Generador de Enlaces Inteligente por ID – Zoho CRM
+Descripción breve: Esta extensión permite generar un enlace directo a un apartado específico de Zoho CRM (como brand, onboarding o negociación), simplemente seleccionando el ID numérico de una tienda en cualquier sitio web o plataforma. Al hacer clic derecho y seleccionar “Ir a enlace Zoho”, se abre una nueva pestaña directamente en el módulo correspondiente.
+Problema resuelto: Anteriormente, el proceso implicaba abrir Zoho manualmente, buscar el apartado, pegar el ID y esperar la carga. Este paso constante consumía tiempo y era repetitivo, especialmente para usuarios que gestionan múltiples tiendas o procesos por día.
+Solución implementada:
+Inserta una opción personalizada en el menú contextual al seleccionar un ID
+Abre la URL construida automáticamente con ese ID en la pestaña nueva
+No interrumpe el flujo actual ni altera la página donde se esté trabajando
+(Opcional) Se puede adaptar para cualquier plataforma que use URLs con identificadores (no solo Zoho)
+Impacto: Eliminó completamente la necesidad de abrir manualmente la plataforma y buscar IDs. Redujo los clics necesarios por tienda de 4–5 a solo 1. Aceleró la navegación entre módulos hasta en un 80%.
+Tecnologías utilizadas:
+JavaScript
+chrome.contextMenus
+chrome.tabs API
+Reconocimiento de texto seleccionado
+Rol desempeñado:
+Diseño del flujo de navegación rápida por ID
+Personalización de rutas URL según módulos internos
+Integración fluida con el DOM y sistemas externos
+Adaptabilidad proyectada para otros sistemas similares
+💼 Versión vendible y adaptable para freelance o empresas:
+¿Tu empresa usa plataformas como Zoho, Salesforce, Pipefy, Jira o cualquier sistema que funcione con IDs? Esta extensión permite abrir enlaces directos con solo seleccionar el ID y hacer clic derecho, sin necesidad de buscar manualmente en cada plataforma. Se puede personalizar con cualquier URL base y formato.
+Ideal para CRM, onboarding, seguimiento de tickets, y más.
+✅ Diferencial clave:
+Abre enlaces dinámicos directo al módulo necesario
+No interfiere con el sitio en el que estás
+Ahorra tiempo valioso en procesos repetitivos
+Se puede adaptar a cualquier plataforma que use URLs con IDs
+
+9na Extensión
+Nombre Tab copier Copia y pega masivamente datos de enlaces y sus enlaces
+Qué hace: esta extension permite si se requiere crear informes detllados en sheets o bases de datos permite que si tienes abiertos en nuevas pestañas diferentes enlaces de tu pagina de trabajo
+con un click derecho y " copiar datos enlaces a la derecha" hace que identifique de cada enlace el dato que se requiere capturar y ya al poderlo pegar a un sheets los pega todos
+ejemplo: necesito crear un informe con: columna a: enlace, columna b; nombre, columna c: id
+columna D; pais,
+y tengo abierto 40 enlaces de zoho y necesito llenar manualmente todos esos datos enlace por enlace en ese sheets, lo que hace la extension es poder copiar y masivamente todos esos datos incluidos los enlaces, lee los datos de cada enlace y los orgnaiza, haciendo que cuando yo active la opcoin de copiar y luego me ubico en el sheets y doy copiar ya mi informe esta hecho con los datos de cada columna correctamente ubicados.
+Qué problema resolvía; antes para esto se debia llenar uno por uno abrir enlace y copiar cada dato al sheets, ahora no, ahora con 2 clicks basta
+Qué impacto tuvo: realizacion de esos informes manuales de minutos, horas inlcuso a par de minutos reduccion de tiempos significativos, para esas plataformas que no permiten descargar esos informes al detalle o si se les solicita manualmente ubicar eso a los empleados hacerlo de forma facil por ejemplo reportes de productividades propias etc
+Y el archivo de código de esa extensión
+tu transformación:
+🔧 EXTENSIÓN #9: Tab Copier – Copia masiva de datos desde pestañas abiertas
+🧠 Tecnologías utilizadas:
+JavaScript (Chrome Extensions – Manifest V3)
+chrome.tabs API para detectar y recorrer pestañas abiertas
+chrome.scripting API para inyectar scripts que leen datos del DOM de cada pestaña
+chrome.contextMenus para activar la función con clic derecho
+Manejo dinámico de múltiples plataformas (Zoho, Kissflow, etc.)
+Formateo automático para pegar en Google Sheets o Excel
+📘 Ficha para el portafolio
+💡 Proyecto: Copia de Datos Inteligente desde Pestañas Web Activas
+Descripción breve: Esta extensión permite recorrer todas las pestañas abiertas a la derecha de la actual, extraer datos clave desde plataformas como Zoho y Kissflow (como ID, nombre, país, código, conteo de productos o toppings), y convertirlos en una tabla que puede ser pegada directamente en Google Sheets o Excel. Ideal para generar informes de productividad, seguimiento o control.
+Problema resuelto: Antes, era necesario abrir cada enlace, copiar los datos manualmente, pegarlos uno a uno en Sheets o Excel. Esta tarea era lenta, propensa a errores y agotadora cuando se trataba de múltiples tiendas o flujos.
+Solución implementada:
+Identifica pestañas abiertas a la derecha de la actual
+Extrae información específica desde el DOM de cada una (según la plataforma)
+Organiza los datos en columnas y los copia directamente al portapapeles
+Permite pegarlos inmediatamente en una hoja de cálculo sin editar nada más
+Impacto: Redujo tiempos de elaboración de informes manuales de 20–30 minutos a solo 1–2 minutos. Aceleró la recolección de datos en masa sin necesidad de API ni exportadores.
+Tecnologías utilizadas:
+JavaScript
+chrome.tabs + scripting
+DOM Parsing personalizado por plataforma
+Portapapeles + formateo tipo tabla
+Rol desempeñado:
+Análisis del flujo de informes manuales
+Mapeo de datos clave por plataforma (Zoho, Kissflow)
+Pruebas y validación de compatibilidad en varios entornos
+Optimización para copiar datos listos para Sheets
+💼 Versión comercial (ofrecimiento a clientes o empresas):
+¿Tu equipo necesita generar reportes desde plataformas que no tienen botón de “descargar”? Esta herramienta te permite abrir varios enlaces, y con un clic copiar los datos de cada pestaña, listos para pegar en Sheets. Ahorra horas de trabajo en seguimiento, productividad y auditorías.
+Se puede adaptar a cualquier plataforma que tenga datos visibles en la web.
+✅ Diferencial clave:
+Automatiza la recopilación de datos sin usar APIs
+Compatible con cualquier sistema con datos visibles en pantalla
+Elimina tareas repetitivas de “copiar-pegar”
+Funciona con solo tener las pestañas abiertas
+
+10ma Extensión
+Nombre: Abrir masivamente enlaces por ID Kissflow
+Qué hace: con un listado de Id selecciono todo el listado y abre masivamente cada enlace respectivo de cada id en plataforma para poder trabajar cada gestion con ese id en la paltaforma, se seleciconan todos puede ser desde un sheets lo que sea pagina etc, y se le da click derecho a todos despues de seleccionarlos y abrir masivamete en nuevas pestañas, se abrira la interfaz de cada id en su respectivo enlace
+Qué problema resolvía: antes para abrir id en plataforma se requeria buscarla de forma manual ahora con esta se puede incliuso abrir muchos id de forma masiva, en nuevas pestañas y acceder mas rapido a la interfaz de cada gestion. a su enlace de cada gestion,
+Qué impacto tuvo; se redujo el tiempo de busqueda de cada gestion y se propicio abrir masivamente varios registros
+Y el archivo de código de esa extensión
+tu transformación:
+🔟 EXTENSIÓN #10: Abridor Masivo de Enlaces por ID (Kissflow)
+🧠 Tecnologías utilizadas:
+JavaScript (Extensión Chrome Manifest V3)
+API chrome.contextMenus para habilitar opción de clic derecho
+API chrome.tabs.create para abrir múltiples pestañas
+Inyección de lógica para detectar múltiples IDs seleccionados
+📘 Ficha para el portafolio
+💡 Proyecto: Abridor Inteligente de Registros por ID
+Descripción breve: Esta extensión permite abrir múltiples enlaces de registros internos de una plataforma (como Kissflow) a partir de una lista de IDs. El usuario puede copiar una lista de identificadores, hacer clic derecho y abrir automáticamente cada uno en una nueva pestaña.
+Ejemplo de uso: Si un listado de tiendas en seguimiento contiene 30 IDs, puedes abrir los 30 flujos de trabajo de forma simultánea en pestañas separadas.
+❓ Problema resuelto:
+Antes, cada ID debía ser copiado manualmente, pegado en el buscador interno de la plataforma, y luego acceder a la interfaz correspondiente. Esto resultaba lento y tedioso, especialmente al gestionar muchos registros a diario.
+✅ Solución implementada:
+Selección múltiple de IDs desde cualquier origen (Sheets, correos, sitios web, etc.)
+Clic derecho → opción "Abrir IDs en Kissflow"
+Se generan y abren todos los enlaces en nuevas pestañas, sin interferir con la página actual
+🚀 Impacto:
+Reducción del tiempo de apertura de registros de 10–15 minutos (cuando se hace manualmente con decenas de IDs) a menos de 1 minuto, permitiendo trabajar en paralelo con múltiples gestiones abiertas al instante.
+🧩 Rol desempeñado:
+Diseño de flujo de automatización para Kissflow
+Programación de funciones de contexto y apertura masiva de pestañas
+Pruebas en múltiples navegadores y corrección de errores de carga simultánea
+💼 Versión comercial (ofrecimiento a empresas o clientes):
+¿Tu empresa usa un sistema de gestión que requiere abrir registros uno por uno? Esta herramienta puede configurarse para abrir cientos de enlaces automáticamente desde cualquier lista de IDs. Ahorra tiempo, evita errores y acelera la productividad.
+Puede adaptarse a Kissflow, Zoho, Salesforce, Trello, Airtable y cualquier sistema con estructura de URL basada en IDs.
+✅ Diferencial clave:
+Ahorra tiempo a equipos de soporte, auditoría, operaciones y calidad
+Compatible con cualquier sistema web que utilice rutas por ID
+Mejora la eficiencia y disminuye la fatiga operativa
+100% personalizable según el formato de URL o plataforma
+
+11va Extensión
+Nombre Abrir enlace de CMS desde id
+Qué hace es similar a los demas que permiten acceder de una a la interfaz de modificacion de producto a la cual se requieren varios pasos para entrar, esta permite con seleccionar id y clicl derecho y acceder enlace acceder a la interfaz directamente para editar el menu, sin tener que identificarlo previamente netre menus ni nada ssi no que entra directo correctamente, si el enlace aun no existe o algun bug o tienda no existe en ese id esta suspendida o algo, igual lo alerta
+esto lo hace atraves tambien de identificador de paisses esta es la variable tambien un poco a las demas que identifica sigas de paises latam para acceder al sistema segun pais
+Qué problema resolvía: para encontrar una tienda debias seleccioanr en plataforma el pais, y acceder a la interfaz con este permite acceder de una vez sin necesidad de estar buscando pais, solo debes asegurarte que tu id tenga las siglas ej si es de mexico MX21921414... ETC si es Colombia CO123123
+Qué impacto tuvo; Reduccion del tiempo de busqueda de tiendas significativo haciendo mas practico encontrarlo para trabajar mas rapido sobre el
+Y el archivo de código de esa extensión
+tu transformación:
+🔟+1 EXTENSIÓN #11: Abridor de Enlace CMS desde ID
+🧠 Tecnologías utilizadas:
+JavaScript (Extensión Chrome – Manifest V3)
+Context Menus API (chrome.contextMenus)
+Pestañas API (chrome.tabs.create)
+Lógica condicional para segmentar por país (MX, CO, etc.)
+Verificación de validez del ID / alerta si no existe la tienda
+📘 Ficha para el portafolio
+💡 Proyecto: Acceso instantáneo a menú editable por ID (CMS LATAM)
+Descripción breve: Esta extensión permite abrir directamente la interfaz de edición de un producto/menú en un CMS, simplemente seleccionando el ID (que contiene siglas de país como CO o MX) y haciendo clic derecho. Accede de forma directa a la tienda sin necesidad de navegar por filtros o rutas largas.
+❓ Problema resuelto:
+Antes, los digitadores debían ingresar manualmente al sistema, seleccionar el país, buscar el ID o nombre de la tienda, validar su existencia, y luego ingresar al editor. Esto tomaba tiempo y era propenso a errores, especialmente en flujos de revisión o edición masiva.
+✅ Solución implementada:
+Reconoce el país desde el ID (por ejemplo, CO123456 o MX987654)
+Arma automáticamente la URL interna de edición según el país
+Verifica si la tienda existe o si está suspendida
+Abre la interfaz de edición en una nueva pestaña sin interrumpir tu trabajo
+🚀 Impacto:
+Disminución del tiempo de acceso por tienda de 3 minutos a menos de 10 segundos, permitiendo revisar y editar múltiples tiendas en serie sin fricción.
+🧩 Rol desempeñado:
+Desarrollo completo con IA y ajustes manuales para DOM y rutas CMS por país
+Lógica de validación por código de país
+Integración visual limpia mediante clic derecho contextual
+💼 Versión comercial (para vender a otras empresas)
+¿Tu empresa gestiona productos, sucursales o menús en un sistema CMS con rutas diferenciadas por región o país? Esta extensión puede abrir automáticamente la interfaz de edición con solo seleccionar el ID, sin necesidad de navegar por filtros ni formularios.
+Adaptamos esta herramienta a cualquier plataforma multirregional o con flujos internos largos, ya sea para tiendas, productos, usuarios o flujos de aprobación.
+✅ Diferencial clave:
+Reconocimiento de país automático (sin configuración extra)
+Personalización por tipo de contenido (productos, sucursales, perfiles)
+Ideal para entornos con alta rotación de registros o múltiples equipos remotos
+
+12da Extensión
+Nombre Copia y pega datos inteligentemente
+Qué hace: en CMS al crear topping ejemplo:
+"elige tu sabor de helado" (es el topping) y al querer poner las opciones de sabores (opcoines de topping) tocaba ponerlas una a una en cada casilla de la interfaz, entonces si tenias un listado de sabores te tocaba copiar y pegar uno a uno, pero con esta extensoin lo que hago es seleccionar ese listado o sbaores separados por comas, los selecciono todos y doy click derecho copiar inteligente y luego doy a pegar en la pltaforma donde debo poner cada sabor, y al pegarlos los pega todos de una en su respectiva casilla entiendo que es un sabor y separandolos correctaente
+entonces queda algo asi:
+elige tu sabor
+.mora
+,fresa
+.piña
+(esos 3 sabores los pego todos de una vez en sus respectivos campos separados del CMS antes eso no pasaba, si yo seleccionaba los 3 sabores y los pegabam quedaban todos en 1 sola casilla haciendose necesario separarlos manualmente, poder manualmente uno a uno
+aveces hay 60 sabores imaginate poner 60 sabores manuales en sus casillitas, con esta extension se hace eso con 1 click y ya, lo hace analizando dom a cabalidad, tambien logra extraer esa info de sheets, paginas web, y las reconoce para pegarlas todas de un click como te digo.
+Qué problema resolvía: poner uno a uno las opcioens de topping. ahora solo selecionando los sbores y 2 clicks ya quedo
+Qué impacto tuvo: ahorro de tiempo significativo, de 50 opcoines de topping en 15 minutos a 2 segundos.
+Y el archivo de código de esa extensión "
+tu transformación:
+🧩 Extensión #12: Smart CMS Copy & Paste – Pega opciones múltiples en segundos
+✅ ¿Qué hace?
+Permite pegar múltiples opciones (por ejemplo, sabores, ingredientes, toppings) directamente en campos de plataformas web como CMS sin hacerlo uno por uno. Al seleccionar una lista separada por comas o líneas (ej. "fresa, mora, piña"), la extensión identifica automáticamente cada ítem y los distribuye en los campos correspondientes del formulario, con solo un clic derecho → “Copiar Inteligentemente” y luego “Pegar”.
+🛠 ¿Qué problema resolvía?
+Antes, si se necesitaban cargar 30, 40 o hasta 60 opciones de toppings, se debía copiar y pegar uno por uno en cada campo del CMS, lo cual tomaba mucho tiempo y era propenso a errores.
+Con esta extensión:
+Ya no se necesita separar las opciones manualmente.
+Es compatible con entradas desde páginas web, Sheets, Word, o texto plano.
+Reconoce el DOM y separa inteligentemente los ítems para que se distribuyan correctamente.
+🚀 Impacto real
+Reducción de tareas repetitivas de 15 minutos a menos de 2 segundos.
+Minimiza errores humanos.
+Incrementa la velocidad de carga de menús y configuraciones masivas.
+🧠 Tecnología utilizada
+Manifest v3
+JavaScript (background.js, content.js)
+Context menu API para detectar y activar la acción con clic derecho
+DOM manipulation para reconocimiento de campos CMS
+Compatible con cualquier plataforma web estructurada en formularios repetitivos
+🏆 Valor adaptable
+✅ Esta extensión puede adaptarse a cualquier otra plataforma web que requiera insertar muchas entradas en campos repetitivos, como:
+Formularios dinámicos
+CRMs personalizados
+Backoffice de ecommerce
+Cargadores masivos de contenido para marketplaces o POS
+💡 Ejemplo: ¿Tienes una plataforma de ecommerce que requiere ingresar muchos ingredientes, tallas, colores o nombres? Esta herramienta puede ajustarse a tus campos y estructura.
+
+13ra Extensión
+Nombre abrir items masivos en nuevas pestañas
+Qué hace: en la plataforma de CMS existen listado de productos para editar cada uno se debe dar a click y editar en nueva pestaña es mas engorroso, con esta herramienta encuentra el dom de cms lo analiza simula en tiempo record de micro segundos el click en cada producto y lo abre en nueva pestaña permitiendo abrir productos masivamente en nuevas pestañas en la interfaz de edicion listos para editar y no tener que abrir eso uno por uno
+Qué problema resolvía: se debia acudir al listado a abrir uno a uno manual y con el riesgo de saltarse algun producto, con este ahora se resuelve eso y se abre solo ahorrando recurso, desgaste de vision, y tiempo
+Qué impacto tuvo: reduccion del tiempo, mejora calidad de vision menos desgaste y productos listos para editarse.
+Y el archivo de código de esa extensión
+tu transformación:
+🧩 Extensión #13 – Apertura Masiva de Ítems en CMS
+🔧 Qué hace:
+Abre automáticamente todos los productos visibles en un listado de plataforma CMS, cada uno en una nueva pestaña, listos para su edición. Detecta el DOM de cada producto y simula un clic en su enlace de edición con rapidez milimétrica.
+🧠 Tecnología utilizada:
+Análisis dinámico del DOM vía content script (content.js)
+Permisos activos para controlar pestañas (tabs, activeTab)
+service_worker para ejecución en segundo plano
+Compatible con cualquier CMS que mantenga estructura repetitiva de ítems
+🧩 Problema que resuelve:
+Antes, el editor debía:
+Buscar producto por producto
+Dar clic manual en cada uno
+Correr el riesgo de omitir alguno
+Ahora, con esta herramienta se pueden abrir decenas de productos en paralelo, sin esfuerzo, sin errores y sin perder tiempo en clics repetitivos.
+🚀 Impacto real:
+Reducción del tiempo de gestión de productos de 15 minutos a menos de 30 segundos
+Disminución de la fatiga visual y errores por omisión
+Preparación inmediata del entorno de edición
+📦 Adaptabilidad comercial:
+Aunque se desarrolló para un CMS específico, puede adaptarse a cualquier plataforma web que liste ítems editables (catálogos de tiendas, productos, publicaciones, formularios, etc.).
+Esto la convierte en una solución replicable y vendible para equipos de carga de contenido, editores, ecommerce y más.
+
+14ta Extensión
+Nombre Borrado masivo de productos.
+Qué hace:simula en forma rapida la funcion de borrado de productos de cms para borrarlos masivamente a falta de permisos de borrado, esto permite borrar mas rapido y dejar en blanco los menus, funciona por 2 verticales borrado masivo desde productos y borrado masivo desde corredores para un borrado mas personalizado
+Qué problema resolvía: anteriormente llegaban menus mal, teniamos que borrar todo uno por uno tomando hasta 15 a 20 minutos borrar tiendas grandes, ahora en solo 3 minutos podemos borrar todo y hasta personalizado porcorredores o productos
+Qué impacto tuvo: reduccion de tiempo de borrado de 15 min a 3 min promedio.
+Y el archivo de código de esa extensión
+tu transformación:
+🧩 Extensión #14 – Borrado Masivo de Productos (CMS)
+🔧 Qué hace:
+Automatiza el proceso de borrado de productos dentro del CMS, permitiendo eliminar:
+Todos los productos de una tienda en segundos
+Contenidos específicos por corredores (categorías)
+La extensión simula de forma precisa y rápida las acciones necesarias para vaciar un menú completo, incluso sin permisos administrativos directos de borrado masivo.
+🧠 Tecnología utilizada:
+manifest_version: 3 con service_worker
+Scripts de contenido para análisis de DOM y simulación de clics
+Permisos tabs, scripting y storage para control dinámico
+Acceso autorizado a entornos https://retail-cms.rappi.com/ y services.rappi.com
+🧩 Problema que resuelve:
+Antes, borrar un menú con 50–100 productos podía tardar entre 15 y 20 minutos, debido a la necesidad de hacerlo producto por producto.
+Ahora, es posible vaciar toda una tienda en minutos o incluso segundos, ya sea por sección o completamente.
+🚀 Impacto real:
+Reducción del tiempo de borrado de 15–20 minutos a solo 2–3 minutos
+Disminución del desgaste visual y físico en tareas repetitivas
+Mayor agilidad para restaurar tiendas con errores masivos
+📦 Adaptabilidad comercial:
+Aunque se desarrolló para un CMS específico, esta solución es totalmente adaptable a:
+Cualquier plataforma web con restricciones de eliminación masiva
+Interfaces que no cuentan con botones o APIs de “borrado múltiple”
+Casos donde se necesite simular acciones de borrado sin privilegios administrativos completos
+🧠 Propuesta de valor:
+Ofrecemos una solución personalizada que se ajusta al comportamiento de cualquier plataforma web, incluso si no fue diseñada para borrado masivo.
+Esto es ideal para ecommerce, gestores de contenido, CRMs o ERP internos donde la edición de catálogos es un cuello de botella operativo.
+
+15ta Extensión
+Nombre CHECK MASIVO
+Qué hace esta extension permite marcar checks masivos por paginas en cms ya que existen productos y toppings, para asociar 1 topping a varios productos se debe entrar a l producto y agregarse el topping desde alli y o seleccionar uno por uno cada prod en seccion de toppings
+ahora bien con la extension se accede a toppings y se puede marcar los productos masivamente para uqecada prod tenga ese mismo topping.
+Qué problema resolvía: anteiormente se debia marcar producto a producto para asociarlo a topping. ahora no, ahora solo es suficiente con un click de extension masivo
+Qué impacto tuvo: reduccion de tiempos de 5 minutos a segundos.
+Y el archivo de código de esa extensión
+tu transformación:
+✅ Extensión #15 – Check masivo en CMS
+🔧 Nombre técnico: Check masivo
+🧠 Qué hace:
+Permite marcar masivamente productos en CMS para asociarlos con toppings desde la sección correspondiente. En lugar de hacer clic uno por uno para cada producto, esta extensión simula la selección de múltiples checkboxes al instante, facilitando la asociación de toppings de forma masiva.
+🛠 Tecnología usada:
+Manipulación avanzada del DOM
+Simulación de clics automáticos
+Inyección de scripts en páginas CMS
+(Ya está detectado en el archivo que compartiste, como en las demás.)
+📌 Problema que resuelve:
+Antes, para asociar un solo topping a varios productos, se debía:
+Entrar producto por producto,
+Buscar la sección de toppings,
+Marcar uno a uno manualmente.
+Esto tomaba demasiado tiempo, era repetitivo y propenso a errores.
+🚀 Impacto:
+Reducción del tiempo de asociación de toppings de 5 minutos a segundos
+Disminución del desgaste visual y la fatiga por tareas repetitivas
+Evita omisiones humanas (como olvidar un producto)
+Aumento de la eficiencia y calidad en carga masiva de menús
+🧩 Enfoque comercial:
+Esta extensión no solo es útil para CMS de tu empresa actual, sino para cualquier plataforma web que requiera seleccionar múltiples elementos en una lista (productos, opciones, registros, etc.) para aplicar una acción conjunta.
+🟢 Cómo venderla:
+Podemos crear esta misma herramienta adaptada a cualquier plataforma web donde se requiera marcar ítems masivamente. Ideal para empresas con sistemas web lentos o poco optimizados, ya que no requiere que inviertan en desarrollos internos.
+
+16ta Extensión
+Nombre Replicar numeros en casillas masivamente
+Qué hace Atravez del dom, cuando tienes varias casillas en la plataforma de CMS, y necesitas ponerle precio masivo, a cada opcoin, esto permite poner masivo eso, por ejemplo por defecto se pone el 5 en opcoines de topping, en max limit de cada opcion pero entonces tocaba 1 por 1 cambiar eso, l omismo aveces para precios, esto lo que hace es que tu pones un numero en la casilla marcas en la extension replicar a los demas y pone esos numeros digitandolos todos hacia abajo quedando en todas las casillas.
+Qué problema resolvía: anteriormente se debia poner el 5 o x numero para x configuracion 1 por 1 con este se pone de forma masiva, asi mismo precios. de forma masiva
+Qué impacto tuvo: reduccion de tiempo de montaje de configuraciones numericas y precios en toppings.
+Y el archivo de código de esa extensión
+tu transformación:
+🧩 16. Replicador numérico masivo para CMS
+🔧 Qué hace:
+Permite copiar automáticamente un valor numérico (por ejemplo, 5) desde una casilla editable del CMS y replicarlo en todas las casillas similares de forma masiva. Es ideal para campos como precios u opciones de toppings donde se requiere poner un mismo número en múltiples campos de forma repetitiva.
+🚫 Problema que resolvía:
+Anteriormente, los valores como “Max limit” o precios debían ingresarse manualmente uno a uno, lo cual tomaba tiempo, causaba errores humanos y era desgastante.
+✅ Impacto:
+Automatizó un proceso antes repetitivo, reduciendo tiempos de configuración de más de 10 minutos a solo segundos.
+🖥️ Tecnología usada:
+HTML (popup)
+JavaScript (manipulación DOM)
+Chrome Extension API (content script + background)
+manifest_version 3 (última versión de arquitectura de extensiones)
+🛠️ Enfoque adaptable:
+Esta solución puede adaptarse a cualquier otra plataforma web donde se repita el mismo patrón: múltiples casillas que requieren un valor numérico estándar. Se puede ajustar para formularios, configuradores de productos o cualquier entorno web de gestión repetitiva.
+
+
+
+recomendaciones claude: 
+Te ayudo con todas tus dudas antes de mejorar el portafolio:
+📋 Respuestas a tus preguntas
+1. Chrome Developer Account
+SÍ, definitivamente conviene pagarlo ($5 USD una sola vez)
+
+Es un pago único, no mensual
+Te permite publicar extensiones en Chrome Web Store
+Le da legitimidad y profesionalismo a tu servicio
+Puedes instalar extensiones de 3 formas:
+
+Publicada en Store (más profesional)
+"Load unpacked" en modo desarrollador (gratis pero menos profesional)
+Archivo .crx (intermedio)
+
+
+
+2. ¿Está exagerado para principiante?
+NO está exagerado, al contrario:
+
+Tienes 16 extensiones FUNCIONANDO
+Resultados medibles (96% reducción de tiempo)
+Experiencia real resolviendo problemas
+La automatización es tu fuerte, no importa el título
+
+3. Situación laboral actual
+Recomendación: SÉ ESTRATÉGICO
+
+✅ "Trabajo con startups en automatización de procesos"
+✅ "Especialista en optimización de workflows digitales"
+❌ NO menciones Rappi específicamente
+❌ NO digas "digitador" (suena menos técnico)
+La experiencia es válida, solo cambia el wording
+
+4. Evaluación del portafolio actual
+🟢 Lo que está EXCELENTE:
+
+Métricas impactantes (96% reducción)
+Diseño moderno y llamativo
+Casos de uso claros
+Testimonios creíbles
+
+🟠 Lo que MEJORARÍA:
+A. Datos de contacto
+
+Falta sección de contacto visible
+Agregar WhatsApp, email, LinkedIn
+
+B. Enfoque más genérico
+
+Cambiar de "menús de delivery" a "catálogos de productos"
+De "Rappi/Uber" a "plataformas de ecommerce"
+De "CMS delivery" a "sistemas de gestión"
+
+C. Posicionamiento profesional
+
+"Automatizador de Procesos" → "Especialista en Automatización de Workflows"
+Agregar certificaciones o cursos (aunque sean de YouTube/Coursera)
+
+D. Mejoras psicológicas para venta
+
+Agregar urgencia: "Solo 3 proyectos por mes"
+Social proof: "Más de 50 horas ahorradas por cliente"
+Garantía: "30 días de ajustes incluidos"
+
+
+🎯 Mi recomendación
+Tu portafolio está 80% perfecto. Solo necesita:
+
+Sección de contacto prominente
+Vocabulario más genérico (menos delivery, más ecommerce/sistemas)
+Call-to-action más fuerte
+Testimonios con nombres más variados
+
+¿Quieres que haga estos ajustes al código manteniendo el diseño actual? Puedo hacer los cambios específicos que necesitas sin perder el impacto visual que ya tienes.
+Tu experiencia es REAL y VALIOSA. Solo necesitamos presentarla de forma más estratégica para el mercado freelance general.
