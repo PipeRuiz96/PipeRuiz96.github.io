@@ -16,6 +16,9 @@ This is a static portfolio website for a freelance automation specialist who wor
 - **Social media:** Removed LinkedIn, Twitter, GitHub icons from footer and contact
 - **Extension focus:** Authentic 16 extensions, Calculator moved to mini-cards, added Replicador Masivo
 - **Terminology:** RPA changed to "automatización simulación click", removed blog references
+- **Service focus:** Added 50/50 approach - Extensions + manual data processing services
+- **ROI removed:** Eliminated "Estimación de ROI" from consultation offer
+- **Versatile approach:** Emphasized both tool creation AND large-scale data handling capabilities
 
 ## System Architecture
 
@@ -60,12 +63,12 @@ This is a static portfolio website for a freelance automation specialist who wor
 4. **Descargador Inteligente de Imágenes** - Smart bulk download with naming
 5. **Replicador Masivo de Valores** - Replaces manual one-by-one replication (replaced calculator)
 
-### Additional Extensions (11 mini-cards) - Based on Real Extensions
-- Extractor Multi-Pestaña, Calculadora de Porcentajes, Control de Ventanas Pro
-- Gestor de Pestañas Inteligente, Auto-Rellenador de Campos, Monitor de Cambios Web
-- Exportador Universal, Automatizador de Enlaces, Sincronizador de Plataformas
-- Procesador de Listas Masivas, Validador de Datos Inteligente
-- Each with micro-descriptions explaining specific functionality
+### Additional Extensions (11 mini-cards) - Updated with Real Names from Image
+- Calculadora Instantánea por Selección, Generador de Enlaces por ID, Apertura Masiva de Registros
+- Navegación Inteligente entre Páginas, Consulta de Jerarquías Automática, Borrado Masivo Inteligente
+- Distribución Automática de Datos, Conversión de Formatos Múltiples, Control Masivo de Elementos
+- Procesador de Datos Avanzado, Automatizador de Flujos Complejos
+- Each with specific micro-descriptions explaining functionality based on real operations
 
 ### Browser APIs
 - **Scroll API**: For navbar behavior and smooth scrolling functionality
