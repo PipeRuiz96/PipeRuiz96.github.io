@@ -1,960 +1,369 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialista en Automatización | Portfolio Profesional</title>
-    <meta name="description" content="Especialista en automatización de procesos empresariales y desarrollo de extensiones Chrome. Soluciones personalizadas para optimizar tu negocio.">
-    <meta name="keywords" content="automatización, procesos empresariales, extensiones chrome, desarrollo, freelancer, consultoría tecnológica">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles.css">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Automatización Freelance | Enfoque Híbrido</title>
+<meta name="description" content="Automatizo tareas repetitivas y creo extensiones de navegador a medida. Trabajo manual rápido + herramientas personalizadas. Especialista en restaurantes/delivery, aplicable a retail y tecnología.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
-    <div class="particles" id="particles"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <i class="fas fa-cogs"></i>
-                <span>AutomationPro</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
-                <a href="#extensiones" class="nav-link">Extensiones</a>
-                <a href="#portfolio" class="nav-link">Casos de Uso</a>
-                <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+<header class="site-header">
+  <div class="container nav">
+    <a href="#" class="brand" aria-label="Inicio">Automation<span class="brand-accent">Pro</span></a>
+    <nav class="nav-links">
+      <a href="#problemas">Problemas</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#casos">Casos</a>
+      <a href="#extensiones">Extensiones</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto" class="btn btn-sm btn-accent">Contacto</a>
     </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Especialista en Automatización</h1>
-                <p class="hero-subtitle">Creo herramientas que hacen el trabajo por ti</p>
-                <p class="hero-tagline">⚡ De horas de trabajo manual a minutos automatizados</p>
-                
-                <!-- Impact Metrics -->
-                <div class="impact-metrics">
-                    <div class="metric">
-                        <span class="metric-number">16+</span>
-                        <span class="metric-label">Extensiones Chrome</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number">90%</span>
-                        <span class="metric-label">Reducción de Tiempo</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number">100%</span>
-                        <span class="metric-label">Proyectos Exitosos</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number">3+</span>
-                        <span class="metric-label">Años de Experiencia</span>
-                    </div>
-                </div>
+<section class="hero" id="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>Automatizo tareas repetitivas que consumen horas</h1>
+      <p class="lead">Enfoque híbrido: <strong>trabajo manual</strong> cuando necesitas resultados YA y <strong>extensiones personalizadas</strong> para que <strong>tú mismo</strong> lo automatices desde el navegador. Experiencia probada en entornos de alto volumen.</p>
+      <div class="kpis">
+        <div class="kpi"><span>Ejemplo real</span><small>de 2 h a 12 min</small></div>
+        <div class="kpi"><span>Menos errores</span><small>en tareas repetitivas</small></div>
+        <div class="kpi"><span>24–48h</span><small>Entrega express</small></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-accent" href="#extensiones">Ver demos</a>
+        <a class="btn btn-ghost" id="cta-cal" href="#" target="_blank" rel="noopener">Agendar llamada</a>
+      </div>
+      <p class="muted small">Demos con datos de prueba para proteger la confidencialidad.</p>
+    </div>
+    <div class="hero-media">
+      <div class="hero-card glass">
+        <div class="badge">Demo</div>
+        <div class="media-placeholder">Video 10–20s (cuando lo tengas)</div>
+        <p class="caption muted small">*Datos ficticios en demos*</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <!-- CTA Buttons -->
-                <div class="cta-buttons">
-                    <a href="#contacto" class="cta-button cta-primary">
-                        <i class="fas fa-rocket"></i>
-                        Solicitar Cotización
-                    </a>
-                    <a href="#portfolio" class="cta-button cta-secondary">
-                        <i class="fas fa-eye"></i>
-                        Ver Portfolio
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="problems" id="problemas">
+  <div class="container">
+    <h2>Problemas que resuelvo (Top 3)</h2>
+    <div class="grid-3">
+      <div class="card lift">
+        <div class="icon">📦</div>
+        <h3>Carga masiva de productos</h3>
+        <p>Transformo información desordenada en datos listos para usar y acelerar la carga.</p>
+      </div>
+      <div class="card lift">
+        <div class="icon">📊</div>
+        <h3>Extracción y organización de datos</h3>
+        <p>Obtengo datos de páginas/archivos y los dejo estructurados en tablas claras.</p>
+      </div>
+      <div class="card lift">
+        <div class="icon">🖼️</div>
+        <h3>Optimización de imágenes</h3>
+        <p>Reduzco el peso manteniendo una calidad mínima útil para listados.</p>
+      </div>
+    </div>
+    <p class="muted small" style="margin-top:8px">Para más soluciones específicas, revisa <a href="#extensiones">Extensiones</a>.</p>
+  </div>
+</section>
 
-    <!-- Quick Wins Section -->
-    <section class="quick-wins">
-        <div class="container">
-            <h2>¿Qué puedo hacer por tu negocio?</h2>
-            <div class="wins-grid">
-                <div class="win-card">
-                    <span class="win-icon">⚡</span>
-                    <h3 class="win-title">Ahorro de Tiempo Real</h3>
-                    <p class="win-description">Tareas que toman 2 horas las hago en 5 minutos. Tiempo que puedes usar para hacer crecer tu negocio.</p>
-                    <a href="#servicios" class="win-cta">Descubre Cómo</a>
-                </div>
-                <div class="win-card">
-                    <span class="win-icon">💰</span>
-                    <h3 class="win-title">Sin Errores Humanos</h3>
-                    <p class="win-description">Mis extensiones trabajan 24/7 sin cansarse, sin errores, copiando datos exactamente como necesitas.</p>
-                    <a href="#servicios" class="win-cta">Ver Beneficios</a>
-                </div>
-                <div class="win-card">
-                    <span class="win-icon">📈</span>
-                    <h3 class="win-title">Funciona Inmediatamente</h3>
-                    <p class="win-description">Instalas la extensión y empieza a trabajar. No necesitas capacitar a nadie ni cambiar tus procesos.</p>
-                    <a href="#contacto" class="win-cta">Consultar</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="services" id="servicios">
+  <div class="container">
+    <h2>Opciones de servicio</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>🔧 Trabajo manual inmediato</h3>
+        <ul class="list">
+          <li>Resultados en 24–48h</li>
+          <li>Yo paso, organizo y <strong>digito grandes volúmenes de datos</strong> y <strong>proceso imágenes por lotes</strong> por ti</li>
+          <li>Sin instalaciones ni configuraciones</li>
+        </ul>
+        <p class="small muted">Perfecto cuando necesitas el resultado ya y prefieres que yo me encargue de todo.</p>
+        <a href="#contacto" class="btn btn-ghost">Solicitar presupuesto</a>
+      </div>
+      <div class="card highlighted">
+        <h3>⚡ Extensión personalizada</h3>
+        <ul class="list">
+          <li>Automatización a medida</li>
+          <li>Menos errores y más consistencia</li>
+          <li>Escalable a largo plazo</li>
+        </ul>
+        <p class="small muted">Es una <strong>herramienta (extensión para el navegador Chrome)</strong> que realiza el proceso automáticamente en tu navegador. Tú la ejecutas cuando quieras y hace el trabajo por ti.</p>
+        <a href="#extensiones" class="btn btn-accent">Ver demos</a>
+      </div>
+      <div class="card">
+        <h3>🎯 Servicio híbrido</h3>
+        <ul class="list">
+          <li>Primero <strong>yo hago el trabajo manual</strong> por ti</li>
+          <li>Validamos el flujo y definimos reglas</li>
+          <li>Luego creo la <strong>extensión</strong> para que tú lo hagas solo</li>
+        </ul>
+        <p class="small muted">La combinación ideal: resultados inmediatos ahora + independencia total con la herramienta.</p>
+        <a href="#contacto" class="btn btn-ghost">Empezar ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="servicios" class="services-section">
-        <div class="container">
-            <h2>¿Qué Hago Exactamente?</h2>
-            <p class="section-subtitle">Creo herramientas personalizadas Y manejo grandes cantidades de datos por ti</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fab fa-chrome"></i>
-                    </div>
-                    <h3>Creo Extensiones para Chrome</h3>
-                    <p>Como las que uso en mi trabajo. Pequeños programas que se instalan en tu navegador y hacen tareas repetitivas automáticamente.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Extensiones personalizadas que automatizan sin programas</li>
-                        <li><i class="fas fa-check"></i> Extracción de datos</li>
-                        <li><i class="fas fa-check"></i> Integración con APIs</li>
-                        <li><i class="fas fa-check"></i> Interfaz personalizada</li>
-                    </ul>
-                    <div class="service-cta">
-                        <span class="price-note">Cotización personalizada</span>
-                        <a href="#contacto" class="service-btn">Consultar</a>
-                    </div>
-                </div>
+<section class="cases" id="casos">
+  <div class="container">
+    <h2>Casos reales (anonimizados)</h2>
+    <div class="grid-3">
+      <article class="card">
+        <h3>Restaurante (COL)</h3>
+        <p><span class="label label-problem">❗ Problema</span> Copiado manual de menús en lotes grandes.</p>
+        <p><span class="label label-solution">🛠️ Solución</span> Flujo semiautomatizado con revisión.</p>
+        <p><span class="label label-result">📈 Resultado</span> Ejemplo real: de 2 h a 12 min.</p>
+        <div class="media-placeholder small">Video 10–20s</div>
+      </article>
+      <article class="card">
+        <h3>Retail (MX)</h3>
+        <p><span class="label label-problem">❗ Problema</span> Datos de proveedores con formatos distintos.</p>
+        <p><span class="label label-solution">🛠️ Solución</span> Normalización y mapeo automático de campos.</p>
+        <p><span class="label label-result">📈 Resultado</span> Ahorro significativo de tiempo.</p>
+        <div class="media-placeholder small">Video 10–20s</div>
+      </article>
+      <article class="card">
+        <h3>Marketing</h3>
+        <p><span class="label label-problem">❗ Problema</span> Procesar cientos de imágenes por campaña.</p>
+        <p><span class="label label-solution">🛠️ Solución</span> Optimización por lotes con control de calidad.</p>
+        <p><span class="label label-result">📈 Resultado</span> Flujo más ágil (según el caso).</p>
+        <div class="media-placeholder small">Video 10–20s</div>
+      </article>
+    </div>
+  </div>
+</section>
 
-                <div class="service-card featured">
-                    <div class="featured-badge">Más Popular</div>
-                    <div class="service-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>Automatizo Procesos Operativos</h3>
-                    <p>¿Pasas horas haciendo tareas repetitivas? Creo herramientas que automatizan procesos operativos en segundos, sin errores.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Automatización por simulación de clicks</li>
-                        <li><i class="fas fa-check"></i> Transferencia de datos entre plataformas</li>
-                        <li><i class="fas fa-check"></i> Organización automática de información</li>
-                        <li><i class="fas fa-check"></i> Gestión masiva de archivos</li>
-                    </ul>
-                    <div class="service-cta">
-                        <span class="price-note">Desde consulta gratuita</span>
-                        <a href="#contacto" class="service-btn">Empezar Ahora</a>
-                    </div>
-                </div>
+<section class="extensions" id="extensiones">
+  <div class="container">
+    <h2>Extensiones (demos y descripciones)</h2>
+    <p class="muted small" style="margin-top:-6px;margin-bottom:12px">Son herramientas que automatizan el trabajo por ti. Requieren usar el <strong>navegador Chrome</strong> y funcionan sobre páginas web compatibles.</p>
+    <div class="filters">
+      <button class="tag active" data-filter="all">Todas</button>
+      <button class="tag" data-filter="ingesta">Ingesta</button>
+      <button class="tag" data-filter="estructura">Estructuración</button>
+      <button class="tag" data-filter="publicacion">Publicación</button>
+      <button class="tag" data-filter="imagenes">Imágenes</button>
+      <button class="tag" data-filter="qa">QA/Validación</button>
+      <button class="tag" data-filter="integraciones">Integraciones</button>
+    </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Manejo Grandes Cantidades de Datos</h3>
-                    <p>¿Tienes miles de registros que procesar? Yo mismo los manejo por ti usando mis herramientas, entregándote todo organizado y listo.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Procesamiento de miles de registros</li>
-                        <li><i class="fas fa-check"></i> Migración entre plataformas</li>
-                        <li><i class="fas fa-check"></i> Organización y limpieza de datos</li>
-                        <li><i class="fas fa-check"></i> Entrega en formato requerido</li>
-                    </ul>
-                    <div class="service-cta">
-                        <span class="price-note">Por volumen procesado</span>
-                        <a href="#contacto" class="service-btn">Consultar</a>
-                    </div>
-                </div>
+    <div class="grid-3" id="extGrid">
+      <!-- 16 tarjetas con icono pequeño por categoría -->
+      <div class="e-card" data-category="publicacion">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🚀 Automatizador de Digitación <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Ejecuta entradas de texto y acciones repetitivas con mayor consistencia.</p></div>
+      </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-download"></i>
-                    </div>
-                    <h3>Extraigo Datos de Páginas Web</h3>
-                    <p>Si necesitas información de una página web en Excel, creo herramientas que la extraen y organizan automáticamente como tú quieras.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Web scraping personalizado</li>
-                        <li><i class="fas fa-check"></i> Conversión web a Excel/Sheets</li>
-                        <li><i class="fas fa-check"></i> Gestión automática de imágenes</li>
-                        <li><i class="fas fa-check"></i> Transferencia masiva de datos</li>
-                    </ul>
-                    <div class="service-cta">
-                        <span class="price-note">Proyecto por fases</span>
-                        <a href="#contacto" class="service-btn">Discutir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="e-card" data-category="ingesta">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>📥 Convertidor Web → Excel/Sheets <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Restaurantes/Delivery, Retail</p>
+        <p>Convierte información de páginas en tablas listas para trabajar.</p></div>
+      </div>
 
-    <!-- Top Extensions Section -->
-    <section id="extensiones" class="top-extensions-section">
-        <div class="container">
-            <h2>Mis 5 Extensiones Más Destacadas</h2>
-            <p class="section-subtitle">Herramientas reales que he desarrollado y que uso diariamente</p>
-            
-            <div class="extensions-grid">
-                <!-- Extension 1: Automatizador de Digitación -->
-                <div class="extension-card">
-                    <div class="extension-header">
-                        <div class="extension-icon">
-                            <i class="fas fa-keyboard"></i>
-                        </div>
-                        <h3>Automatizador de Digitación</h3>
-                        <span class="extension-badge">Más Popular</span>
-                    </div>
-                    <div class="extension-content">
-                        <p><strong>Problema:</strong> Tardaba 1-2 horas copiando menús de Sheets a plataforma CMS manualmente.</p>
-                        <p><strong>Solución:</strong> Extrae datos de Google Sheets y los copia automáticamente a la plataforma web con velocidades altas.</p>
-                        
-                        <!-- VIDEO PLACEHOLDER -->
-                        <div class="demo-container">
-                            <div class="video-placeholder">
-                                <i class="fas fa-play"></i>
-                                <span>Video Demo (Aquí va tu video)</span>
-                                <!-- Aquí puedes pegar el código embed de tu video -->
-                            </div>
-                        </div>
-                        
-                        <div class="extension-results">
-                            <span class="result-badge success">De 2 horas a 5 minutos</span>
-                            <span class="result-badge impact">85% reducción tiempo</span>
-                        </div>
-                        
-                        <div class="tech-used">
-                            <span>JavaScript</span>
-                            <span>Google Sheets API</span>
-                            <span>DOM Manipulation</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="e-card" data-category="imagenes">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🖼️ Analizador de Imágenes Google Drive <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Marketing, Catálogos</p>
+        <p>Revisa imágenes en lotes y ayuda a identificar archivos que requieren ajuste.</p></div>
+      </div>
 
-                <!-- Extension 2: Convertor Web a Excel -->
-                <div class="extension-card">
-                    <div class="extension-header">
-                        <div class="extension-icon">
-                            <i class="fas fa-file-excel"></i>
-                        </div>
-                        <h3>Convertor Web → Excel/Sheets</h3>
-                    </div>
-                    <div class="extension-content">
-                        <p><strong>Problema:</strong> Convertir contenido de páginas web a formato organizado tomaba horas ya que las herramientas que ofrece la web no son personalizadas.</p>
-                        <p><strong>Solución:</strong> Analiza el DOM y convierte páginas web a Excel/Sheets con formato personalizado.</p>
-                        
-                        <!-- GIF PLACEHOLDER -->
-                       <div class="demo-container">
-    <video controls width="100%" style="border-radius: 10px;">
-        <source src="videos/web-sheets.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-    </video>
-</div>
-                        
-                        <div class="extension-results">
-                            <span class="result-badge success">De 2 horas a 10 minutos</span>
-                            <span class="result-badge impact">Formato personalizado</span>
-                        </div>
-                        
-                        <div class="tech-used">
-                            <span>DOM Scraping</span>
-                            <span>Chrome Extensions</span>
-                            <span>CSV/Excel Export</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="e-card" data-category="imagenes">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🖼️ Descargador Inteligente de Imágenes <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Descarga imágenes desde múltiples fuentes y organiza sus nombres.</p></div>
+      </div>
 
-                <!-- Extension 3: Analizador Google Drive -->
-                <div class="extension-card">
-                    <div class="extension-header">
-                        <div class="extension-icon">
-                            <i class="fab fa-google-drive"></i>
-                        </div>
-                        <h3>Analizador de Imágenes Google Drive</h3>
-                    </div>
-                    <div class="extension-content">
-                        <p><strong>Problema:</strong> Analizar calidad de fotos y descargarlas en formato correcto tomaba 20 minutos.</p>
-                        <p><strong>Solución:</strong> Analiza calidad automáticamente y descarga en formato JPEG/PNG optimizado para CMS.</p>
-                        
-                        <!-- VIDEO PLACEHOLDER -->
-                        <div class="demo-container">
-                            <div class="video-placeholder">
-                                <i class="fas fa-play"></i>
-                                <span>Video Demo (Aquí va tu video)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="extension-results">
-                            <span class="result-badge success">De 20 min a 2 min</span>
-                            <span class="result-badge impact">Sin ZIP, directo al PC</span>
-                        </div>
-                        
-                        <div class="tech-used">
-                            <span>Google Drive API</span>
-                            <span>Image Analysis</span>
-                            <span>Direct Download</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="e-card" data-category="estructura">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🧹 Replicador Masivo de Valores <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Datos, Catálogos</p>
+        <p>Aplica el mismo valor o patrón a múltiples registros en una sola pasada.</p></div>
+      </div>
 
-                <!-- Extension 4: Descarga Imágenes Web -->
-                <div class="extension-card">
-                    <div class="extension-header">
-                        <div class="extension-icon">
-                            <i class="fas fa-download"></i>
-                        </div>
-                        <h3>Descargador Inteligente de Imágenes</h3>
-                    </div>
-                    <div class="extension-content">
-                        <p><strong>Problema:</strong> Descargar imágenes web una por una y renombrarlas manualmente.</p>
-                        <p><strong>Solución:</strong> Descarga múltiples imágenes con nombres automáticos basados en títulos/productos.</p>
-                        
-                        <!-- GIF PLACEHOLDER -->
-                        <div class="demo-container">
-                            <div class="gif-placeholder">
-                                <i class="fas fa-image"></i>
-                                <span>GIF Demo (Aquí va tu GIF)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="extension-results">
-                            <span class="result-badge success">De 15 min a 2 min</span>
-                            <span class="result-badge impact">Nombres automáticos</span>
-                        </div>
-                        
-                        <div class="tech-used">
-                            <span>Chrome Downloads API</span>
-                            <span>Smart Naming</span>
-                            <span>Bulk Processing</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="e-card" data-category="integraciones">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🔢 Calculadora Instantánea por Selección <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Realiza cálculos rápidos sobre datos seleccionados para validar o estimar.</p></div>
+      </div>
 
-                <!-- Extension 5: Replicador Masivo de Valores -->
-                <div class="extension-card">
-                    <div class="extension-header">
-                        <div class="extension-icon">
-                            <i class="fas fa-clone"></i>
-                        </div>
-                        <h3>Replicador Masivo de Valores</h3>
-                    </div>
-                    <div class="extension-content">
-                        <p><strong>Problema:</strong> Replicar configuraciones y valores uno por uno en múltiples elementos de plataformas.</p>
-                        <p><strong>Solución:</strong> Replica masivamente valores, configuraciones y datos entre elementos, eliminando trabajo repetitivo.</p>
-                        
-                        <!-- GIF PLACEHOLDER -->
-                        <div class="demo-container">
-                            <div class="gif-placeholder">
-                                <i class="fas fa-image"></i>
-                                <span>GIF Demo (Aquí va tu GIF)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="extension-results">
-                            <span class="result-badge success">De horas a segundos</span>
-                            <span class="result-badge impact">Replicación masiva</span>
-                        </div>
-                        
-                        <div class="tech-used">
-                            <span>Bulk Operations</span>
-                            <span>Pattern Recognition</span>
-                            <span>Mass Updates</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="e-card" data-category="integraciones">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🔗 Generador de Enlaces por ID <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Crea enlaces directos a partir de identificadores, útil para navegación y seguimiento.</p></div>
+      </div>
 
-        </div>
-    </section>
+      <div class="e-card" data-category="ingesta">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>📥 Apertura Masiva de Registros <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Abre múltiples registros/páginas en secuencia para acelerar la revisión.</p></div>
+      </div>
 
-    <!-- Additional Extensions Section -->
-    <section class="additional-extensions-section">
-        <div class="container">
-            <h2>Mis Otras 11 Extensiones</h2>
-            <p class="section-subtitle">Herramientas adicionales especializadas para casos específicos</p>
-            
-            <div class="additional-extensions-grid">
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Calculadora Instantánea por Selección</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Calcula automáticamente valores seleccionados sin abrir calculadora</p>
-                </div>
+      <div class="e-card" data-category="ingesta">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>📥 Navegación Inteligente entre Páginas <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Recorre páginas relacionadas siguiendo reglas simples de navegación.</p></div>
+      </div>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Generador de Enlaces por ID</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Crea enlaces automáticamente basados en identificadores únicos</p>
-                </div>
+      <div class="e-card" data-category="estructura">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🧹 Consulta de Jerarquías Automática <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Catálogos</p>
+        <p>Ayuda a identificar y estructurar relaciones padre-hijo entre categorías o ítems.</p></div>
+      </div>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Apertura Masiva de Registros</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Abre múltiples registros o elementos de forma secuencial automatizada</p>
-                </div>
+      <div class="e-card" data-category="publicacion">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🚀 Borrado Masivo Inteligente <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Datos</p>
+        <p>Permite eliminar lotes de elementos bajo reglas definidas para evitar errores.</p></div>
+      </div>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Navegación Inteligente entre Páginas</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Navega automáticamente siguiendo patrones de flujo predefinidos</p>
-                </div>
+      <div class="e-card" data-category="estructura">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🧹 Distribución Automática de Datos <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Reparte información a campos/áreas específicas según criterios acordados.</p></div>
+      </div>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Consulta de Jerarquías Automática</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Extrae estructuras jerárquicas de datos automáticamente</p>
-                </div>
+      <div class="e-card" data-category="integraciones">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🔗 Conversión de Formatos Múltiples <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Convierte entre CSV/Excel/JSON u otros, manteniendo la coherencia de campos.</p></div>
+      </div>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Borrado Masivo Inteligente</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Elimina elementos en lote siguiendo criterios específicos</p>
-                </div>
+      <div class="e-card" data-category="publicacion">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🚀 Control Masivo de Elementos <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Aplica acciones a múltiples elementos (activar, desactivar, actualizar atributos).</p></div>
+      </div>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Distribución Automática de Datos</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Distribuye información entre campos de forma inteligente</p>
-                </div>
+      <div class="e-card" data-category="estructura">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🧹 Procesador de Datos Avanzado <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Datos</p>
+        <p>Ejecuta transformaciones personalizadas (limpieza, combinaciones, reglas).</p></div>
+      </div>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Conversión de Formatos Múltiples</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Convierte datos entre diferentes formatos automáticamente</p>
-                </div>
+      <div class="e-card" data-category="integraciones">
+        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div><h3>🔗 Automatizador de Flujos Complejos <span class="badge-soon">Demo próximamente</span></h3>
+        <p class="small muted">Sectores: Todos</p>
+        <p>Orquesta pasos encadenados para tareas repetitivas de principio a fin.</p></div>
+      </div>
+    </div>
+    <p class="muted small" style="margin-top:10px">*Los demos usan datos de prueba y se irán publicando progresivamente.</p>
+  </div>
+</section>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Control Masivo de Elementos</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Controla múltiples elementos de interfaz simultáneamente</p>
-                </div>
+<section id="sobre" class="about">
+  <div class="container">
+    <h2>Sobre mí</h2>
+    <div class="card" style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center">
+      <img src="images/avatar.jpg" alt="Foto de perfil" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.15)">
+      <div>
+        <p class="small">Especialista en automatización y procesamiento de datos para delivery, e‑commerce y retail. Enfoque híbrido: resultados rápidos con trabajo manual y automatización con extensiones de navegador. 2 años de experiencia usando mis propias herramientas en el día a día. 16 extensiones en uso. Colombia (horario COL).</p>
+        <ul class="list small" style="margin-top:8px">
+          <li>Flujos de alto volumen, datos organizados y consistentes</li>
+          <li>NDA disponible si lo necesitas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Procesador de Datos Avanzado</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Procesa grandes volúmenes de datos con reglas personalizadas</p>
-                </div>
+<section class="process" id="proceso">
+  <div class="container">
+    <h2>Proceso de trabajo</h2>
+    <ol class="steps">
+      <li><strong>Diagnóstico (30 min):</strong> revisamos tu flujo actual y oportunidades.</li>
+      <li><strong>Propuesta:</strong> tiempos, resultados esperados e inversión.</li>
+      <li><strong>Ejecución:</strong> herramienta y/o procesamiento.</li>
+      <li><strong>Entrega + soporte:</strong> documentación y ajustes.</li>
+    </ol>
+  </div>
+</section>
 
-                <div class="extension-mini-card">
-                    <div class="extension-mini-header">
-                        <h4>Automatizador de Flujos Complejos</h4>
-                        <div class="gif-mini-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                    </div>
-                    <p class="mini-description">Automatiza secuencias complejas de acciones repetitivas</p>
-                </div>
-            </div>
-            
-            <div class="more-extensions">
-                <p>🔧 <strong>Extensiones personalizadas</strong> + 📊 <strong>Procesamiento masivo de datos</strong><br>
-                Total: 16 automatizaciones adaptables a diferentes industrias y plataformas</p>
-                <a href="#contacto" class="btn-secondary">Consultar Proyecto Personalizado</a>
-            </div>
-        </div>
-    </section>
+<section class="testimonials" id="testimonios">
+  <div class="container">
+    <h2>Opiniones</h2>
+    <div class="grid-3">
+      <div class="card"><p>“Aceleró nuestra carga como nunca. Muy claro el proceso.”</p><p class="muted small">J.R. — Dueño de restaurante, Bogotá</p></div>
+      <div class="card"><p>“Transformó archivos de proveedores a un formato usable y ahorramos días.”</p><p class="muted small">M.L. — Gerente e-commerce, México</p></div>
+      <div class="card"><p>“Las imágenes quedaron listas sin perder calidad y en tiempo récord.”</p><p class="muted small">C.P. — Director de operaciones, Colombia</p></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <h2>Casos de Uso Reales</h2>
-            <p class="section-subtitle">Ejemplos de automatizaciones que puedo crear para tu negocio</p>
-            
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="digitacion">Digitación</button>
-                <button class="filter-btn" data-filter="extraccion">Extracción</button>
-                <button class="filter-btn" data-filter="organizacion">Organización</button>
-            </div>
+<section class="faq" id="faq">
+  <div class="container">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Cuánto tiempo toma crear una extensión?</summary><p>Depende del flujo. Muchas en 3–10 días hábiles.</p></details>
+    <details><summary>¿Funciona con cualquier página web?</summary><p>Generalmente sí. Evalúo la estructura del sitio y adapto la solución.</p></details>
+    <details><summary>¿Qué pasa si necesito cambios después?</summary><p>Incluyo ventana de soporte para ajustes y mejoras.</p></details>
+    <details><summary>¿Manejas información confidencial (NDA)?</summary><p>Sí. Uso datos ficticios en demos y firmo NDA si lo requieres.</p></details>
+    <details><summary>¿Das soporte técnico?</summary><p>Sí, con paquetes según necesidad.</p></details>
+    <details><summary>¿Cómo garantizas que funcionará?</summary><p>Primero validamos con un tramo manual/híbrido y prototipo; luego automatizamos.</p></details>
+  </div>
+</section>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="digitacion">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-keyboard"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Automatización de Carga de Productos</h3>
-                        <p>Si tienes catálogos en Excel/Sheets y necesitas subirlos a tu tienda online, creo una extensión que lo hace automáticamente campo por campo.</p>
-                        <div class="tech-stack">
-                            <span>Google Sheets</span>
-                            <span>Formularios Web</span>
-                            <span>Auto-fill</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-item">
-                                <i class="fas fa-clock"></i>
-                                Horas → Minutos
-                            </span>
-                            <span class="result-item">
-                                <i class="fas fa-check-circle"></i>
-                                Sin errores
-                            </span>
-                        </div>
-                    </div>
-                </div>
+<section class="contact" id="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <div class="contact-grid">
+      <form id="contactForm" action="https://formspree.io/f/XXXX" method="POST" class="card">
+        <label>Nombre<input name="nombre" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Asunto<input name="asunto" id="asunto"></label>
+        <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+        <button class="btn btn-accent" type="submit">Enviar</button>
+        <p class="form-note muted">También puedes escribirme por WhatsApp o agendar una llamada.</p>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+      <aside class="card">
+        <h3>Opciones rápidas</h3>
+        <a id="waButton" class="btn btn-ghost" href="#" target="_blank" rel="noopener">🟢 WhatsApp directo</a>
+        <a id="calButton" class="btn btn-ghost" href="#" target="_blank" rel="noopener">Agendar en Calendly</a>
+        <ul class="list small">
+          <li>Respondo en horario laboral (COL)</li>
+          <li>Puedes enviarme archivos o ejemplos</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
 
-                <div class="portfolio-item" data-category="extraccion">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-download"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Extracción de Datos de Competencia</h3>
-                        <p>¿Necesitas monitorear precios o productos de la competencia? Creo herramientas que extraen esa información y la organizan automáticamente.</p>
-                        <div class="tech-stack">
-                            <span>Web Scraping</span>
-                            <span>Data Export</span>
-                            <span>Organización</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-item">
-                                <i class="fas fa-eye"></i>
-                                Monitoreo automático
-                            </span>
-                            <span class="result-item">
-                                <i class="fas fa-file-excel"></i>
-                                Reportes listos
-                            </span>
-                        </div>
-                    </div>
-                </div>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> AutomationPro. Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</footer>
 
-                <div class="portfolio-item" data-category="organizacion">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-images"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Gestión Masiva de Imágenes</h3>
-                        <p>Si manejas muchas fotos de productos, creo herramientas que las analizan, renombran, redimensionan y organizan automáticamente.</p>
-                        <div class="tech-stack">
-                            <span>Image Processing</span>
-                            <span>Bulk Rename</span>
-                            <span>Quality Check</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-item">
-                                <i class="fas fa-magic"></i>
-                                Organización automática
-                            </span>
-                            <span class="result-item">
-                                <i class="fas fa-compress"></i>
-                                Optimización incluida
-                            </span>
-                        </div>
-                    </div>
-                </div>
+<a class="whatsapp-fab" id="waFAB" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">💬</a>
 
-                <div class="portfolio-item" data-category="digitacion">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-copy"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Copia y Pega Inteligente</h3>
-                        <p>Para tareas que requieren copiar información entre diferentes plataformas de forma repetitiva. Lo automatizo completamente.</p>
-                        <div class="tech-stack">
-                            <span>Cross-Platform</span>
-                            <span>Smart Copy</span>
-                            <span>Data Transfer</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                Proceso veloz
-                            </span>
-                            <span class="result-item">
-                                <i class="fas fa-robot"></i>
-                                100% automático
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-category="organizacion">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Calculadora de Precios Automática</h3>
-                        <p>¿Necesitas aplicar descuentos, aumentos o calcular márgenes? Creo herramientas que hacen todos los cálculos automáticamente.</p>
-                        <div class="tech-stack">
-                            <span>Price Calculation</span>
-                            <span>Bulk Operations</span>
-                            <span>Formula Application</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-item">
-                                <i class="fas fa-percentage"></i>
-                                Cálculos precisos</span>
-                            <span class="result-item">
-                                <i class="fas fa-user-check"></i>
-                                Segmentación automática
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-category="integration">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Validador de Documentos</h3>
-                        <p>Sistema que valida automáticamente documentos digitales, extrae información clave y actualiza bases de datos corporativas.</p>
-                        <div class="tech-stack">
-                            <span>OCR</span>
-                            <span>Python</span>
-                            <span>PDF Processing</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-item">
-                                <i class="fas fa-shield-alt"></i>
-                                100% validación
-                            </span>
-                            <span class="result-item">
-                                <i class="fas fa-hourglass-half"></i>
-                                90% menos tiempo
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="sobre-mi" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Sobre Mí</h2>
-                    <h3>Especialista en Automatización y Optimización</h3>
-                    <p class="lead">Soy un profesional autodidacta apasionado por la tecnología y la innovación, especializado en crear soluciones que transforman procesos manuales en sistemas automatizados eficientes.</p>
-                    
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <div>
-                                <h4>Innovación Constante</h4>
-                                <p>Siempre explorando nuevas tecnologías y metodologías para ofrecer soluciones cutting-edge.</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-puzzle-piece"></i>
-                            <div>
-                                <h4>Soluciones Personalizadas</h4>
-                                <p>Cada proyecto es único. Analizo profundamente tus necesidades para crear la solución perfecta.</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-handshake"></i>
-                            <div>
-                                <h4>Colaboración Estrecha</h4>
-                                <p>Trabajo codo a codo contigo durante todo el proceso, desde la conceptualización hasta la implementación.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills-showcase">
-                        <h4>Especialidades Técnicas</h4>
-                        <div class="skills-tags">
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Chrome Extensions</span>
-                            <span class="skill-tag">Process Automation</span>
-                            <span class="skill-tag">API Integration</span>
-                            <span class="skill-tag">Data Analytics</span>
-                            <span class="skill-tag">RPA</span>
-                            <span class="skill-tag">Web Scraping</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-number">16+</span>
-                            <span class="stat-label">Proyectos Completados</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Horas Ahorradas</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Satisfacción Cliente</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>¿Listo para Automatizar tu Negocio?</h2>
-                    <p class="contact-subtitle">Hablemos sobre cómo puedo ayudarte a optimizar tus procesos y hacer crecer tu empresa.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>Email Directo</h4>
-                                <p>contacto@automationpro.com</p>
-                                <span class="response-time">Respuesta en 24hrs</span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>WhatsApp</h4>
-                                <p>+1 (555) 123-4567</p>
-                                <span class="response-time">Respuesta inmediata</span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>Videollamada</h4>
-                                <p>Agenda una reunión</p>
-                                <span class="response-time">Consulta gratuita</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="consultation-offer">
-                        <div class="offer-badge">¡Oferta Especial!</div>
-                        <h3>Consulta Gratuita de 30 Minutos</h3>
-                        <p>Analizamos tu situación actual y te propongo soluciones concretas sin compromiso.</p>
-                        <ul class="offer-benefits">
-                            <li><i class="fas fa-check"></i> Análisis de procesos actuales</li>
-                            <li><i class="fas fa-check"></i> Identificación de oportunidades</li>
-                            <li><i class="fas fa-check"></i> Propuesta de solución preliminar</li>
-
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xrbzkoyz" method="POST">
-                        <h3>Solicitar Cotización</h3>
-                        <p>Cuéntame sobre tu proyecto y te envío una propuesta personalizada</p>
-                        
-                        <div class="form-group">
-                            <label for="name">Nombre Completo *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Corporativo *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">Empresa</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Tipo de Servicio *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Selecciona un servicio</option>
-                                <option value="chrome-extension">Extensión Chrome</option>
-                                <option value="process-automation">Automatización de Procesos</option>
-                                <option value="data-integration">Integración de Datos</option>
-                                <option value="custom-solution">Solución Personalizada</option>
-                                <option value="consultation">Consultoría General</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="budget">Presupuesto Aproximado</label>
-                            <select id="budget" name="budget">
-                                <option value="">Selecciona un rango</option>
-                                <option value="under-1000">Menos de $1,000</option>
-                                <option value="1000-5000">$1,000 - $5,000</option>
-                                <option value="5000-10000">$5,000 - $10,000</option>
-                                <option value="10000-25000">$10,000 - $25,000</option>
-                                <option value="over-25000">Más de $25,000</option>
-                                <option value="not-sure">No estoy seguro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="timeline">Timeline del Proyecto</label>
-                            <select id="timeline" name="timeline">
-                                <option value="">Selecciona un timeline</option>
-                                <option value="urgent">Urgente (1-2 semanas)</option>
-                                <option value="fast">Rápido (1 mes)</option>
-                                <option value="normal">Normal (2-3 meses)</option>
-                                <option value="flexible">Flexible (3+ meses)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Describe tu Proyecto *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Cuéntame sobre los procesos que quieres automatizar, los problemas que enfrentas, y qué resultados esperas obtener..."></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="newsletter" value="yes">
-                                <span class="checkmark"></span>
-                                Quiero recibir tips de automatización y casos de éxito
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i>
-                            Enviar Solicitud
-                        </button>
-                        
-                        <p class="form-note">
-                            <i class="fas fa-shield-alt"></i>
-                            Tu información está protegida y no será compartida con terceros
-                        </p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="brand-logo">
-                        <i class="fas fa-cogs"></i>
-                        <span>AutomationPro</span>
-                    </div>
-                    <p>Transformando procesos manuales en soluciones automatizadas inteligentes.</p>
-
-                </div>
-                
-                <div class="footer-links">
-                    <div class="links-column">
-                        <h4>Servicios</h4>
-                        <ul>
-                            <li><a href="#servicios">Extensiones Chrome</a></li>
-                            <li><a href="#servicios">Automatización simulación click</a></li>
-                            <li><a href="#servicios">Integración de Datos</a></li>
-                            <li><a href="#contacto">Consultoría</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="links-column">
-                        <h4>Recursos</h4>
-                        <ul>
-                            <li><a href="#portfolio">Casos de Éxito</a></li>
-                            <li><a href="#sobre-mi">Sobre Mí</a></li>
-                            <li><a href="#contacto">Contacto</a></li>
-
-                        </ul>
-                    </div>
-                    
-                    <div class="links-column">
-                        <h4>Contacto</h4>
-                        <ul>
-                            <li><i class="fas fa-envelope"></i> contacto@automationpro.com</li>
-                            <li><i class="fab fa-whatsapp"></i> +1 (555) 123-4567</li>
-                            <li><i class="fas fa-clock"></i> Lun-Vie 9:00-18:00</li>
-                            <li><i class="fas fa-map-marker-alt"></i> Remoto / Mundial</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 AutomationPro. Todos los derechos reservados.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Términos de Servicio</a>
-                    <a href="#">Política de Privacidad</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/script.js"></script>
+<script defer src="assets/script.js"></script>
 </body>
 </html>
