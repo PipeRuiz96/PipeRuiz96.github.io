@@ -1,0 +1,37 @@
+
+# Portafolio Freelance (versión v9)
+
+## Estructura
+- `index.html` — Página principal
+- `assets/styles.css` — Estilos
+- `assets/script.js` — JS (filtros, formulario, WhatsApp/Calendly)
+- `videos/` — Pon aquí tus MP4 cortos (10–20s, ≤8 MB)
+- `images/` — Posters/avatares/etc.
+
+## Datos a editar
+En `assets/script.js`:
+- `WHATSAPP_NUMBER = '57XXXXXXXXXX'`
+- `CALENDLY_URL = '#'` (opcional)
+En `index.html` (Contactos):
+- Reemplaza el `action="https://formspree.io/f/XXXX"` por tu endpoint real.
+
+## Subir a GitHub (rama `redesign`)
+1. En tu repo `PipeRuiz96.github.io`, cambia a la rama **redesign**.
+2. Click **Add file → Upload files**.
+3. Arrastra el **contenido** de esta carpeta (no la carpeta) y suelta.
+   Debe verse `index.html` en el root y `assets/`, `videos/`, `images/` a la par.
+4. Baja y **Commit changes**.
+5. Para publicar, crea un Pull Request desde `redesign` a `main` y haz **Merge**.
+
+
+## Imágenes incluidas
+- `images/poster.jpg` — póster genérico para usar como `poster` de tus videos.
+- `images/avatar.jpg` — avatar/placeholder para la sección "Sobre mí".
+
+Para usar tus videos: reemplaza cada `<div class="e-media">...</div>` por:
+
+```html
+<video src="videos/ext-01.mp4" controls preload="metadata" poster="images/poster.jpg" loading="lazy"></video>
+```
+
+O deja el póster por ahora y cambia cuando tengas demos.
