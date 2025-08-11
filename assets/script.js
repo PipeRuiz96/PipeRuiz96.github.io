@@ -1,51 +1,45 @@
-// Utilidades y comportamiento básico
 document.addEventListener('DOMContentLoaded', () => {
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // === WhatsApp links (edita tu número aquí) ===
-  // TODO: reemplaza por tu número real, formato 57XXXXXXXXXX
-  const WHATSAPP_NUMBER = '57XXXXXXXXXX';
+  // === Edita con tus datos ===
+  const WHATSAPP_NUMBER = '57XXXXXXXXXX'; // tu número real
+  const CALENDLY_URL = '#'; // tu enlace de Calendly/TidyCal (opcional)
   const defaultMsg = encodeURIComponent('Hola, vi tu web y quiero ayuda con automatización. ¿Podemos hablar?');
   const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${defaultMsg}`;
-
-  const waBtn = document.getElementById('cta-whatsapp');
-  const waSecondary = document.getElementById('waSecondary');
   const waFAB = document.getElementById('waFAB');
-  [waBtn, waSecondary, waFAB].forEach(el => { if (el) el.href = waURL; });
+  const waButton = document.getElementById('waButton');
+  const calButton = document.getElementById('calButton');
+  const ctaCal = document.getElementById('cta-cal');
+  [waFAB, waButton].forEach(el => { if (el) el.href = waURL; });
+  [calButton, ctaCal].forEach(el => { if (el) el.href = CALENDLY_URL; });
 
-  // Prefill por "asunto" desde el formulario
+  // Prefill por "asunto"
   const asunto = document.getElementById('asunto');
-  if (asunto) {
-    asunto.addEventListener('input', () => {
-      const msg = encodeURIComponent(`Hola, vi tu web. Asunto: ${asunto.value}`);
-      const liveURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
-      [waSecondary, waFAB, waBtn].forEach(el => { if (el) el.href = liveURL; });
-    });
+  function updateWAWithSubject() {
+    const msg = encodeURIComponent('Hola, vi tu web. Asunto: ' + asunto.value);
+    const liveURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    [waFAB, waButton].forEach(el => { if (el) el.href = liveURL; });
   }
+  if (asunto) asunto.addEventListener('input', updateWAWithSubject);
 
-  // === Filtros del portfolio ===
+  // Filtros de extensiones
   const filterButtons = document.querySelectorAll('[data-filter]');
-  const grid = document.getElementById('portfolioGrid');
+  const grid = document.getElementById('extGrid');
   if (grid && filterButtons.length) {
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const filter = btn.dataset.filter;
-        grid.querySelectorAll('.p-card').forEach(card => {
+        grid.querySelectorAll('.e-card').forEach(card => {
           const cat = card.getAttribute('data-category');
-          if (filter === 'all' || cat === filter) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
+          card.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
         });
       });
     });
   }
 
-  // === Formulario (Formspree) ===
+  // Formspree
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   if (form) {
@@ -59,16 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
           body: data,
           headers: { 'Accept': 'application/json' }
         });
-        if (resp.ok) {
-          form.reset();
-          status.textContent = '¡Gracias! Te responderé pronto.';
-        } else {
-          status.textContent = 'Ups, no se pudo enviar. Escríbeme por WhatsApp.';
-        }
-      } catch (err) {
-        status.textContent = 'Error de red. Intenta de nuevo o usa WhatsApp.';
-      }
+        if (resp.ok) { form.reset(); status.textContent = '¡Gracias! Te responderé pronto.'; }
+        else { status.textContent = 'No se pudo enviar. Escríbeme por WhatsApp.'; }
+      } catch (err) { status.textContent = 'Error de red. Intenta de nuevo o usa WhatsApp.'; }
     });
   }
 });
-
