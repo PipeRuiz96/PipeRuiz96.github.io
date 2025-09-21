@@ -8,7 +8,179 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<style>
+/* CSS básico para que funcione sin archivo externo */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.brand { font-size: 1.5rem; font-weight: bold; color: #fff; text-decoration: none; }
+.brand-accent { color: #4F46E5; }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+.nav-links a:hover { color: #4F46E5; }
+.btn { padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; border: none; cursor: pointer; }
+.btn-accent { background: #4F46E5; color: white; }
+.btn-accent:hover { background: #3730A3; }
+.btn-ghost { background: transparent; color: #4F46E5; border: 1px solid #4F46E5; }
+.btn-ghost:hover { background: #4F46E5; color: white; }
+.btn-sm { padding: 0.5rem 1rem; }
+.hero { padding: 4rem 0; }
+.hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+.lead { font-size: 1.25rem; margin-bottom: 2rem; color: #ccc; }
+.kpis { display: flex; gap: 2rem; margin-bottom: 2rem; }
+.kpi span { display: block; font-weight: 600; }
+.kpi small { color: #888; font-size: 0.875rem; }
+.cta-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
+.muted { color: #888; }
+.small { font-size: 0.875rem; }
+.hero-card { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem; position: relative; }
+.badge { position: absolute; top: 1rem; right: 1rem; background: #4F46E5; color: white; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.75rem; }
+.section { padding: 4rem 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; }
+.card.highlighted { border: 2px solid #4F46E5; }
+.icon { font-size: 2rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; font-weight: bold; margin-bottom: 2rem; text-align: center; }
+h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+.list { list-style: none; }
+.list li { margin-bottom: 0.5rem; padding-left: 1rem; position: relative; }
+.list li:before { content: "✓"; position: absolute; left: 0; color: #4F46E5; }
+.label { padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-right: 0.5rem; }
+.label-problem { background: rgba(239, 68, 68, 0.2); color: #FCA5A5; }
+.label-solution { background: rgba(16, 185, 129, 0.2); color: #86EFAC; }
+.label-result { background: rgba(59, 130, 246, 0.2); color: #93C5FD; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; justify-content: center; }
+.tag { padding: 0.5rem 1rem; border-radius: 2rem; background: rgba(255,255,255,0.1); color: #ccc; border: none; cursor: pointer; transition: all 0.3s; }
+.tag.active, .tag:hover { background: #4F46E5; color: white; }
+.e-card { display: flex; gap: 1rem; background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; margin-bottom: 1rem; }
+.e-media { width: 120px; height: 80px; flex-shrink: 0; }
+.badge-soon { background: #059669; color: white; padding: 0.125rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; }
+.steps { counter-reset: step-counter; }
+.steps li { counter-increment: step-counter; margin-bottom: 1rem; padding-left: 3rem; position: relative; }
+.steps li:before { content: counter(step-counter); position: absolute; left: 0; top: 0; background: #4F46E5; color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+details { margin-bottom: 1rem; }
+summary { background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 0.5rem; cursor: pointer; font-weight: 600; }
+details[open] summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+details p { background: rgba(255,255,255,0.05); padding: 1rem; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem; }
+.contact-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+form label { display: block; margin-bottom: 1rem; }
+form label input, form label textarea { width: 100%; padding: 0.75rem; border: 1px solid #333; background: rgba(255,255,255,0.1); color: white; border-radius: 0.5rem; margin-top: 0.5rem; }
+.site-footer { background: rgba(255,255,255,0.05); padding: 2rem 0; margin-top: 4rem; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; }
+.footer-links { display: flex; gap: 1rem; }
+.footer-links a { color: #ccc; text-decoration: none; }
+.whatsapp-fab { position: fixed; bottom: 2rem; right: 2rem; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000; }
+.form-note { margin-top: 1rem; }
+
+/* Estilos para videos */
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.02);
+}
+
+.video-placeholder::before {
+  content: "▶";
+  font-size: 2rem;
+  color: #4F46E5;
+  margin-right: 0.5rem;
+}
+
+.video-placeholder.small::before {
+  font-size: 1.5rem;
+}
+
+.hero-video-placeholder {
+  width: 100%;
+  height: 250px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero-video-placeholder:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.02);
+}
+
+.hero-video-placeholder::before {
+  content: "▶";
+  font-size: 3rem;
+  color: #4F46E5;
+  margin-bottom: 1rem;
+}
+
+/* Modal para videos */
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.video-modal video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.video-modal-close:hover {
+  color: #4F46E5;
+}
+
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .kpis { flex-direction: column; gap: 1rem; }
+  .cta-row { flex-direction: column; }
+}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -45,14 +217,16 @@
     <div class="hero-media">
       <div class="hero-card glass">
         <div class="badge">Demo</div>
-        <div class="media-placeholder"automatizadorpresenta</div>
+        <div class="hero-video-placeholder" onclick="playVideo('videos/automatizacion.mp4', 'Demo de automatización')" title="Ver demo de automatización">
+          <span style="font-size: 1rem; color: #ccc; margin-top: 1rem;">Click para ver demo</span>
+        </div>
         <p class="caption muted small">*Datos ficticios en demos*</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="problems" id="problemas">
+<section class="problems section" id="problemas">
   <div class="container">
     <h2>Problemas que resuelvo (Top 3)</h2>
     <div class="grid-3">
@@ -76,7 +250,7 @@
   </div>
 </section>
 
-<section class="services" id="servicios">
+<section class="services section" id="servicios">
   <div class="container">
     <h2>Opciones de servicio</h2>
     <div class="grid-3">
@@ -114,7 +288,7 @@
   </div>
 </section>
 
-<section class="cases" id="casos">
+<section class="cases section" id="casos">
   <div class="container">
     <h2>Herramientas desarrolladas en entornos corporativos reales</h2>
     <div class="grid-3">
@@ -123,27 +297,33 @@
         <p><span class="label label-problem">❗ Problema</span> Copiado manual de menús en lotes grandes.</p>
         <p><span class="label label-solution">🛠️ Solución</span> Flujo semiautomatizado con revisión.</p>
         <p><span class="label label-result">📈 Resultado</span> Ejemplo real: de 2 h a 12 min.</p>
-        <div class="media-placeholder small">Video 10–20s</div>
+        <div class="video-placeholder small" onclick="playVideo('videos/automatizacion.mp4', 'Demo Restaurante - Automatización de menús')" title="Ver demo del caso restaurante">
+          <span style="font-size: 0.8rem; margin-left: 2rem;">Ver demo</span>
+        </div>
       </article>
       <article class="card">
         <h3>Retail (MX)</h3>
         <p><span class="label label-problem">❗ Problema</span> Datos de proveedores con formatos distintos.</p>
         <p><span class="label label-solution">🛠️ Solución</span> Normalización y mapeo automático de campos.</p>
         <p><span class="label label-result">📈 Resultado</span> Ahorro significativo de tiempo.</p>
-        <div class="media-placeholder small">scrapper-excel.mp4</div>
+        <div class="video-placeholder small" onclick="playVideo('videos/scrapper-excel.mp4', 'Demo Retail - Scrapper a Excel')" title="Ver demo del caso retail">
+          <span style="font-size: 0.8rem; margin-left: 2rem;">Ver demo</span>
+        </div>
       </article>
       <article class="card">
         <h3>Marketing</h3>
         <p><span class="label label-problem">❗ Problema</span> Procesar cientos de imágenes por campaña.</p>
         <p><span class="label label-solution">🛠️ Solución</span> Optimización por lotes con control de calidad.</p>
         <p><span class="label label-result">📈 Resultado</span> Flujo más ágil (según el caso).</p>
-        <div class="media-placeholder small">google drive fotos.mp4</div>
+        <div class="video-placeholder small" onclick="playVideo('videos/google drive fotos.mp4', 'Demo Marketing - Procesamiento de imágenes')" title="Ver demo del caso marketing">
+          <span style="font-size: 0.8rem; margin-left: 2rem;">Ver demo</span>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="extensions" id="extensiones">
+<section class="extensions section" id="extensiones">
   <div class="container">
     <h2>Extensiones (demos y descripciones)</h2>
     <p class="muted small" style="margin-top:-6px;margin-bottom:12px">Son herramientas que automatizan el trabajo por ti. Requieren usar el <strong>navegador Chrome</strong> y funcionan sobre páginas web compatibles.</p>
@@ -158,212 +338,124 @@
     </div>
 
     <div class="grid-3" id="extGrid">
-      <!-- 16 tarjetas con icono pequeño por categoría -->
       <div class="e-card" data-category="publicacion">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🚀 Automatizador de Digitación <span class="badge-soon">automatizacion.mp4</span></h3>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/automatizacion.mp4', 'Automatizador de Digitación')" title="Ver demo de automatizador de digitación"></div>
+        </div>
+        <div><h3>🚀 Automatizador de Digitación <span class="badge-soon">Demo disponible</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Ejecuta entradas de texto y acciones repetitivas con mayor consistencia.</p></div>
       </div>
 
       <div class="e-card" data-category="ingesta">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>📥 Convertidor Web → Excel/Sheets <span class="badge-soon">scrapper-excel.mp4</span></h3>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/scrapper-excel.mp4', 'Convertidor Web a Excel')" title="Ver demo del scrapper a Excel"></div>
+        </div>
+        <div><h3>📥 Convertidor Web → Excel/Sheets <span class="badge-soon">Demo disponible</span></h3>
         <p class="small muted">Sectores: Restaurantes/Delivery, Retail</p>
         <p>Convierte información de páginas en tablas listas para trabajar.</p></div>
       </div>
 
       <div class="e-card" data-category="imagenes">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🖼️ Analizador de Imágenes Google Drive <span class="badge-soon">google drive fotos.mp4</span></h3>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/google drive fotos.mp4', 'Analizador de Imágenes Google Drive')" title="Ver demo del analizador de imágenes"></div>
+        </div>
+        <div><h3>🖼️ Analizador de Imágenes Google Drive <span class="badge-soon">Demo disponible</span></h3>
         <p class="small muted">Sectores: Marketing, Catálogos</p>
         <p>Revisa imágenes en lotes y ayuda a identificar archivos que requieren ajuste.</p></div>
       </div>
 
       <div class="e-card" data-category="imagenes">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🖼️ Descargador Inteligente de Imágenes <span class="badge-soon">logo.mp4</span></h3>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/logo.mp4', 'Descargador de Imágenes')" title="Ver demo del descargador de imágenes"></div>
+        </div>
+        <div><h3>🖼️ Descargador Inteligente de Imágenes <span class="badge-soon">Demo disponible</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Descarga imágenes desde múltiples fuentes y organiza sus nombres.</p></div>
       </div>
 
       <div class="e-card" data-category="estructura">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🧹 Replicador Masivo de Valores <span class="badge-soon">seleccionador.mp4</span></h3>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/seleccionador.mp4', 'Replicador Masivo')" title="Ver demo del replicador masivo"></div>
+        </div>
+        <div><h3>🧹 Replicador Masivo de Valores <span class="badge-soon">Demo disponible</span></h3>
         <p class="small muted">Sectores: Datos, Catálogos</p>
         <p>Aplica el mismo valor o patrón a múltiples registros en una sola pasada.</p></div>
       </div>
 
       <div class="e-card" data-category="integraciones">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🔢 Calculadora Instantánea por Selección <span class="badge-soon">demo proximamente</span></h3>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/porcentajes.mp4', 'Calculadora Instantánea')" title="Ver demo de calculadora"></div>
+        </div>
+        <div><h3>🔢 Calculadora Instantánea por Selección <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Realiza cálculos rápidos sobre datos seleccionados para validar o estimar.</p></div>
       </div>
 
       <div class="e-card" data-category="integraciones">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/web-sheets.mp4', 'Generador de Enlaces')" title="Ver demo del generador de enlaces"></div>
+        </div>
         <div><h3>🔗 Generador de Enlaces por ID <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Crea enlaces directos a partir de identificadores, útil para navegación y seguimiento.</p></div>
       </div>
 
       <div class="e-card" data-category="ingesta">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/automatizacion.mp4', 'Apertura Masiva')" title="Ver demo de apertura masiva"></div>
+        </div>
         <div><h3>📥 Apertura Masiva de Registros <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Abre múltiples registros/páginas en secuencia para acelerar la revisión.</p></div>
       </div>
 
       <div class="e-card" data-category="ingesta">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/scrapper-excel.mp4', 'Navegación Inteligente')" title="Ver demo de navegación inteligente"></div>
+        </div>
         <div><h3>📥 Navegación Inteligente entre Páginas <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Recorre páginas relacionadas siguiendo reglas simples de navegación.</p></div>
       </div>
 
       <div class="e-card" data-category="estructura">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/google drive fotos.mp4', 'Consulta de Jerarquías')" title="Ver demo de jerarquías"></div>
+        </div>
         <div><h3>🧹 Consulta de Jerarquías Automática <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Catálogos</p>
         <p>Ayuda a identificar y estructurar relaciones padre-hijo entre categorías o ítems.</p></div>
       </div>
 
       <div class="e-card" data-category="publicacion">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/logo.mp4', 'Borrado Masivo')" title="Ver demo de borrado masivo"></div>
+        </div>
         <div><h3>🚀 Borrado Masivo Inteligente <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Datos</p>
         <p>Permite eliminar lotes de elementos bajo reglas definidas para evitar errores.</p></div>
       </div>
 
       <div class="e-card" data-category="estructura">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/seleccionador.mp4', 'Distribución Automática')" title="Ver demo de distribución"></div>
+        </div>
         <div><h3>🧹 Distribución Automática de Datos <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Reparte información a campos/áreas específicas según criterios acordados.</p></div>
       </div>
 
       <div class="e-card" data-category="integraciones">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/web-sheets.mp4', 'Conversión de Formatos')" title="Ver demo de conversión"></div>
+        </div>
         <div><h3>🔗 Conversión de Formatos Múltiples <span class="badge-soon">Demo próximamente</span></h3>
         <p class="small muted">Sectores: Todos</p>
         <p>Convierte entre CSV/Excel/JSON u otros, manteniendo la coherencia de campos.</p></div>
       </div>
 
       <div class="e-card" data-category="publicacion">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🚀 Control Masivo de Elementos <span class="badge-soon">Demo próximamente</span></h3>
-        <p class="small muted">Sectores: Todos</p>
-        <p>Aplica acciones a múltiples elementos (activar, desactivar, actualizar atributos).</p></div>
-      </div>
-
-      <div class="e-card" data-category="estructura">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🧹 Procesador de Datos Avanzado <span class="badge-soon">seleccionador.mp4</span></h3>
-        <p class="small muted">Sectores: Datos</p>
-        <p>Ejecuta transformaciones personalizadas (limpieza, combinaciones, reglas).</p></div>
-      </div>
-
-      <div class="e-card" data-category="integraciones">
-        <div class="e-media"><img src="images/poster.jpg" alt="Demo próximamente" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.95"></div>
-        <div><h3>🔗 Automatizador de Flujos Complejos <span class="badge-soon">Demo próximamente</span></h3>
-        <p class="small muted">Sectores: Todos</p>
-        <p>Orquesta pasos encadenados para tareas repetitivas de principio a fin.</p></div>
-      </div>
-    </div>
-    <p class="muted small" style="margin-top:10px">*Los demos usan datos de prueba y se irán publicando progresivamente.</p>
-  </div>
-</section>
-
-<section id="sobre" class="about">
-  <div class="container">
-    <h2>Sobre mí</h2>
-    <div class="card" style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center">
-      <img src="images/avatar.jpg" alt="Foto de perfil" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.15)">
-      <div>
-        <p class="small">Especialista en automatización y procesamiento de datos para delivery, e‑commerce y retail. Enfoque híbrido: resultados rápidos con trabajo manual y automatización con extensiones de navegador. 2+ años especializándome en automatización para operaciones de alto volumen, 16 extensiones en uso. Colombia (horario COL).</p>
-        <ul class="list small" style="margin-top:8px">
-          <li>Flujos de alto volumen, datos organizados y consistentes</li>
-          <li>NDA disponible si lo necesitas</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="process" id="proceso">
-  <div class="container">
-    <h2>Proceso de trabajo</h2>
-    <ol class="steps">
-      <li><strong>Diagnóstico (30 min):</strong> revisamos tu flujo actual y oportunidades.</li>
-      <li><strong>Propuesta:</strong> tiempos, resultados esperados e inversión.</li>
-      <li><strong>Ejecución:</strong> herramienta y/o procesamiento.</li>
-      <li><strong>Entrega + soporte:</strong> documentación y ajustes.</li>
-    </ol>
-  </div>
-</section>
-
-<section class="testimonials" id="testimonios">
-  <div class="container">
-    <h2>Opiniones</h2>
-    <div class="grid-3">
-      <div class="card"><p>“Aceleró nuestra carga como nunca. Muy claro el proceso.”</p><p class="muted small">J.R. — Dueño de restaurante, Bogotá</p></div>
-      <div class="card"><p>“Transformó archivos de proveedores a un formato usable y ahorramos días.”</p><p class="muted small">M.L. — Gerente e-commerce, México</p></div>
-      <div class="card"><p>“Las imágenes quedaron listas sin perder calidad y en tiempo récord.”</p><p class="muted small">C.P. — Director de operaciones, Colombia</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <div class="container">
-    <h2>Preguntas frecuentes</h2>
-    <details><summary>¿Cuánto tiempo toma crear una extensión?</summary><p>Depende del flujo. Muchas en 3–10 días hábiles.</p></details>
-    <details><summary>¿Funciona con cualquier página web?</summary><p>Generalmente sí. Evalúo la estructura del sitio y adapto la solución.</p></details>
-    <details><summary>¿Qué pasa si necesito cambios después?</summary><p>Incluyo ventana de soporte para ajustes y mejoras.</p></details>
-    <details><summary>¿Manejas información confidencial (NDA)?</summary><p>Sí. Uso datos ficticios en demos y firmo NDA si lo requieres.</p></details>
-    <details><summary>¿Das soporte técnico?</summary><p>Sí, con paquetes según necesidad.</p></details>
-    <details><summary>¿Cómo garantizas que funcionará?</summary><p>Primero validamos con un tramo manual/híbrido y prototipo; luego automatizamos.</p></details>
-  </div>
-</section>
-
-<section class="contact" id="contacto">
-  <div class="container">
-    <h2>Contacto</h2>
-    <div class="contact-grid">
-      <form id="contactForm" action="https://formspree.io/f/XXXX" method="POST" class="card">
-        <label>Nombre<input name="nombre" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Asunto<input name="asunto" id="asunto"></label>
-        <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
-        <button class="btn btn-accent" type="submit">Enviar</button>
-        <p class="form-note muted">También puedes escribirme por WhatsApp o agendar una llamada.</p>
-        <p class="form-status" id="formStatus" aria-live="polite"></p>
-      </form>
-      <aside class="card">
-        <h3>Opciones rápidas</h3>
-        <a id="waButton" class="btn btn-ghost" href="#" target="_blank" rel="noopener">🟢 WhatsApp directo</a>
-        <a id="calButton" class="btn btn-ghost" href="#" target="_blank" rel="noopener">Agendar en Calendly</a>
-        <ul class="list small">
-          <li>Respondo en horario laboral (COL)</li>
-          <li>Puedes enviarme archivos o ejemplos</li>
-        </ul>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> AutomationPro. Todos los derechos reservados.</p>
-    <div class="footer-links">
-      <a href="#faq">FAQ</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </div>
-</footer>
-
-<a class="whatsapp-fab" id="waFAB" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">💬</a>
-
-<script defer src="assets/script.js"></script>
-</body>
-</html>
+        <div class="e-media">
+          <div class="video-placeholder" onclick="playVideo('videos/automatizacion.mp4', 'Control Masivo')" title="Ver demo de control masivo"></div>
+        </div>
