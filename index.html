@@ -1,4 +1,7 @@
-  <!DOCTYPE html>
+Index · HTML
+Copiar
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -10,8 +13,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
-<link rel="stylesheet" href="assets/additional-styles.css">
-
 </head>
 <body>
 <header class="site-header">
@@ -27,7 +28,7 @@
     </nav>
   </div>
 </header>
-
+ 
 <section class="hero" id="hero">
   <div class="container hero-inner">
     <div class="hero-copy">
@@ -40,7 +41,7 @@
       </div>
       <div class="cta-row">
         <a class="btn btn-accent" href="#proyectos">Ver proyectos</a>
-        <a class="btn btn-ghost" id="cta-wa" href="https://wa.me/573057514675?text=Hola,%20vi%20tu%20portfolio" target="_blank">Contactar por WhatsApp</a>
+        <a class="btn btn-ghost" id="cta-wa" href="#contacto">Contactar por WhatsApp</a>
       </div>
       <p class="muted small">Demos con datos de prueba para proteger la confidencialidad.</p>
     </div>
@@ -53,7 +54,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section class="problems" id="problemas">
   <div class="container">
     <h2>Problemas que resuelvo (Top 3)</h2>
@@ -76,7 +77,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section class="services" id="servicios">
   <div class="container">
     <h2>Lo que ofrezco</h2>
@@ -117,7 +118,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section class="projects" id="proyectos">
   <div class="container">
     <h2>Proyectos destacados</h2>
@@ -126,7 +127,7 @@
     <!-- Proyecto Estrella -->
     <article class="featured-project">
       <div class="project-media">
-        <div class="media-placeholder">Video Google Drive → CMS</div>
+        <video src="videos/google-drive-fotos.mp4" controls muted loop style="width:100%;height:100%;object-fit:cover;border-radius:12px"></video>
       </div>
       <div class="project-content">
         <div class="project-badge">⭐ Proyecto Destacado</div>
@@ -145,7 +146,7 @@
         <p class="small muted"><strong>Aplicable a:</strong> E-commerce, catálogos digitales, plataformas de delivery, retail, marketing digital.</p>
       </div>
     </article>
-
+ 
     <!-- Grid de proyectos -->
     <div class="filters" style="margin-top:40px">
       <button class="tag active" data-filter="all">Todos</button>
@@ -153,7 +154,7 @@
       <button class="tag" data-filter="ia">Apps con IA</button>
       <button class="tag" data-filter="apis">Integración APIs</button>
     </div>
-
+ 
     <div class="grid-3" id="projectsGrid">
       
       <!-- Chatbot con IA -->
@@ -173,7 +174,7 @@
           <span class="tech-tag-sm">Real-time DB</span>
         </div>
       </article>
-
+ 
       <!-- Procesador de documentos con IA -->
       <article class="project-card" data-category="ia apis">
         <div class="project-media-small">
@@ -191,7 +192,7 @@
           <span class="tech-tag-sm">IA Multimodal</span>
         </div>
       </article>
-
+ 
       <!-- Automatizador de digitación -->
       <article class="project-card" data-category="extensiones">
         <div class="project-media-small">
@@ -208,11 +209,11 @@
           <span class="tech-tag-sm">JavaScript</span>
         </div>
       </article>
-
+ 
       <!-- Scrapper -->
       <article class="project-card" data-category="extensiones">
         <div class="project-media-small">
-          <div class="media-placeholder small">scrapper-excel.mp4</div>
+          <video src="videos/scrapper-excel.mp4" controls muted loop style="width:100%;height:100%;object-fit:cover;border-radius:8px"></video>
         </div>
         <div class="project-badge-small">🔧 Extensión</div>
         <h4>Convertidor Web → Excel/Sheets</h4>
@@ -224,11 +225,11 @@
           <span class="tech-tag-sm">Export Excel</span>
         </div>
       </article>
-
+ 
       <!-- Analizador de imágenes -->
       <article class="project-card" data-category="extensiones">
         <div class="project-media-small">
-          <div class="media-placeholder small">google drive fotos.mp4</div>
+          <video src="videos/google-drive-fotos.mp4" controls muted loop style="width:100%;height:100%;object-fit:cover;border-radius:8px"></video>
         </div>
         <div class="project-badge-small">🔧 Extensión</div>
         <h4>Analizador de Imágenes Google Drive</h4>
@@ -240,11 +241,11 @@
           <span class="tech-tag-sm">Batch Analysis</span>
         </div>
       </article>
-
+ 
       <!-- Descargador de imágenes -->
       <article class="project-card" data-category="extensiones">
         <div class="project-media-small">
-          <div class="media-placeholder small">logo.mp4</div>
+          <video src="videos/logo.mp4" controls muted loop style="width:100%;height:100%;object-fit:cover;border-radius:8px"></video>
         </div>
         <div class="project-badge-small">🔧 Extensión</div>
         <h4>Descargador Inteligente de Imágenes</h4>
@@ -256,11 +257,11 @@
           <span class="tech-tag-sm">File Management</span>
         </div>
       </article>
-
+ 
       <!-- Replicador masivo -->
       <article class="project-card" data-category="extensiones">
         <div class="project-media-small">
-          <div class="media-placeholder small">seleccionador.mp4</div>
+          <video src="videos/seleccionador.mp4" controls muted loop style="width:100%;height:100%;object-fit:cover;border-radius:8px"></video>
         </div>
         <div class="project-badge-small">🔧 Extensión</div>
         <h4>Replicador Masivo de Valores</h4>
@@ -271,19 +272,19 @@
           <span class="tech-tag-sm">Data Management</span>
         </div>
       </article>
-
+ 
     </div>
-
+ 
     <div class="additional-projects">
       <p class="muted" style="margin-top:30px;text-align:center">
         <strong>+ Extensiones adicionales:</strong> Calculadora instantánea, Generador de enlaces, Apertura masiva de registros, Navegación inteligente, Consulta de jerarquías, Borrado masivo, Distribución de datos, Conversión de formatos, Control masivo de elementos, Automatizador de flujos complejos.
       </p>
       <p class="small muted" style="text-align:center;margin-top:10px">Desarrollo extensiones personalizadas según flujos específicos de cada cliente.</p>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <section id="sobre" class="about">
   <div class="container">
     <h2>Sobre mí</h2>
@@ -301,7 +302,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section class="process" id="proceso">
   <div class="container">
     <h2>Proceso de trabajo</h2>
@@ -313,7 +314,7 @@
     </ol>
   </div>
 </section>
-
+ 
 <section class="testimonials" id="testimonios">
   <div class="container">
     <h2>Opiniones</h2>
@@ -324,7 +325,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section class="faq" id="faq">
   <div class="container">
     <h2>Preguntas frecuentes</h2>
@@ -338,13 +339,13 @@
     <details><summary>¿Entregas el código fuente de las extensiones?</summary><p>Sí, el código fuente de extensiones personalizadas se entrega completo junto con documentación de uso y mantenimiento.</p></details>
   </div>
 </section>
-
+ 
 <section class="contact" id="contacto">
   <div class="container">
     <h2>Contacto</h2>
     <p class="muted" style="text-align:center;margin-top:-5px;margin-bottom:25px">Escríbeme por WhatsApp para respuesta inmediata o deja tu consulta en el formulario.</p>
     <div class="contact-grid">
-      <form id="contactForm" action="https://formspree.io/f/mreaqwwa" method="POST" class="card">
+      <form id="contactForm" action="https://formspree.io/f/TU_FORMSPREE_ID" method="POST" class="card">
         <label>Nombre<input name="nombre" required></label>
         <label>Email<input type="email" name="email" required></label>
         <label>Empresa/Proyecto (opcional)<input name="empresa"></label>
@@ -354,7 +355,7 @@
       </form>
       <aside class="card">
         <h3>Opciones rápidas</h3>
-        <a id="waButton" class="btn btn-accent" href="https://wa.me/573057514675?text=Hola,%20vi%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20automatización" target="_blank" rel="noopener">💬 WhatsApp directo</a>
+        <a id="waButton" class="btn btn-accent" href="https://wa.me/57TUNUMERO?text=Hola,%20vi%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20automatización" target="_blank" rel="noopener">💬 WhatsApp directo</a>
         <p class="small muted" style="margin-top:10px;margin-bottom:15px">Respondo en horario laboral colombiano (Lunes a Viernes, 9am-6pm COL)</p>
         
         <!-- Descomentar si tienes Calendly -->
@@ -369,7 +370,7 @@
     </div>
   </div>
 </section>
-
+ 
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>© <span id="year"></span> AutomationPro. Todos los derechos reservados.</p>
@@ -380,10 +381,10 @@
     </div>
   </div>
 </footer>
-
+ 
 <!-- WhatsApp Floating Button -->
-<a class="whatsapp-fab" id="waFAB" href="https://wa.me/573057514675?text=Hola,%20vi%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20automatización" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">💬</a>
-
+<a class="whatsapp-fab" id="waFAB" href="https://wa.me/57TUNUMERO?text=Hola,%20vi%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20automatización" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">💬</a>
+ 
 <script defer src="assets/script.js"></script>
 </body>
 </html>
